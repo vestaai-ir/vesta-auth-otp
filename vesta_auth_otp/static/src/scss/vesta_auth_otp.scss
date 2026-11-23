@@ -1,0 +1,343 @@
+// Copyright 2026 Vesta AI (https://vestaai.ir)
+// License LGPL-3.0 or later (https://www.gnu.org/licenses/lgpl).
+//
+// Vesta Mobile Login: the card of the login, sign-up and account pages. The colours follow the tokens of Vesta Shop
+// when it is installed (light and `html[data-vs-theme=dark]`), else the colours of the website.
+
+.o_vesta_otp {
+    --vo-card: var(--vs-card, var(--bs-body-bg, #fff));
+    --vo-text: var(--vs-text, var(--bs-body-color, #2e2b23));
+    --vo-ink: var(--vs-ink, var(--bs-emphasis-color, #23211c));
+    --vo-muted: var(--vs-muted, var(--bs-secondary-color, #7a7d84));
+    --vo-line: var(--vs-line, var(--bs-border-color, #e7e7ea));
+    --vo-field: var(--vs-page, var(--bs-body-bg, #fff));
+    --vo-soft: var(--vs-strip, #f5f5f5);
+    --vo-accent: var(--vs-accent, #e5a93b);
+    --vo-btn-bg: var(--vs-ink, #23211c);
+    --vo-btn-fg: var(--vs-page, #fff);
+    --vo-radius: var(--vs-radius, 14px);
+    --vo-ok: var(--vs-green, #2f8a4c);
+    --vo-ok-soft: var(--vs-green-soft, #e3f4e8);
+    --vo-warn: var(--vs-amber, #8a5a00);
+    --vo-warn-soft: var(--vs-amber-soft, #fdf0d5);
+
+    display: none;
+    max-width: 420px;
+    margin: 32px auto;
+    color: var(--vo-text);
+
+    &.o_vo_active {
+        display: block;
+    }
+    // the password forms (and the user switch of Odoo) wait behind the mobile card
+    &.o_vo_active ~ form.oe_login_form,
+    &.o_vo_active ~ form.oe_signup_form,
+    &.o_vo_active ~ owl-component,
+    &.o_vo_active ~ .o_user_switch {
+        display: none !important;
+    }
+
+    .o_vo_card {
+        background: var(--vo-card);
+        border: 1px solid var(--vo-line);
+        border-radius: calc(var(--vo-radius) + 4px);
+        box-shadow: 0 10px 34px rgba(0, 0, 0, 0.07);
+        padding: 28px 26px 18px;
+    }
+
+    .o_vo_test_badge {
+        display: flex;
+        align-items: center;
+        gap: 6px;
+        margin: -8px 0 16px;
+        padding: 6px 12px;
+        border-radius: 999px;
+        background: var(--vo-warn-soft);
+        color: var(--vo-warn);
+        font-size: 0.8rem;
+        font-weight: 600;
+        line-height: 1.4;
+    }
+
+    .o_vo_icon {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 48px;
+        height: 48px;
+        margin-bottom: 12px;
+        border-radius: 50%;
+        background: var(--vo-soft);
+        color: var(--vo-ink);
+        font-size: 24px;
+    }
+
+    .o_vo_title {
+        margin: 0 0 6px;
+        color: var(--vo-ink);
+        font-size: 1.35rem;
+        font-weight: 800;
+    }
+
+    .o_vo_lead {
+        margin-bottom: 18px;
+        color: var(--vo-muted);
+        font-size: 0.92rem;
+        line-height: 1.7;
+
+        b {
+            color: var(--vo-ink);
+            unicode-bidi: isolate;
+            white-space: nowrap;
+        }
+    }
+
+    .form-label {
+        color: var(--vo-ink);
+        font-weight: 600;
+        font-size: 0.88rem;
+    }
+
+    .form-control {
+        min-height: 48px;
+        border: 1px solid var(--vo-line);
+        border-radius: var(--vo-radius);
+        background: var(--vo-field);
+        color: var(--vo-ink);
+        font-size: 1.05rem;
+
+        &:focus {
+            border-color: var(--vo-accent);
+            box-shadow: 0 0 0 3px color-mix(in srgb, var(--vo-accent) 30%, transparent);
+        }
+        &::placeholder {
+            color: var(--vo-muted);
+            opacity: 0.7;
+        }
+    }
+
+    input[dir="ltr"] {
+        // numbers read left to right, also on a right-to-left page (the RTL form rules align fields to the end)
+        /*rtl:ignore*/
+        text-align: left !important;
+        letter-spacing: 0.04em;
+    }
+
+    .o_vo_code {
+        min-height: 58px;
+        text-align: center !important;
+        font-size: 1.7rem;
+        font-weight: 700;
+        letter-spacing: 0.5em !important;
+        padding-inline-start: 0.5em;
+        font-variant-numeric: tabular-nums;
+    }
+
+    .o_vo_submit {
+        width: 100%;
+        min-height: 48px;
+        margin-top: 14px;
+        border: 0;
+        border-radius: 999px;
+        background: var(--vo-btn-bg);
+        color: var(--vo-btn-fg);
+        font-weight: 700;
+
+        &:hover,
+        &:focus-visible {
+            background: var(--vo-btn-bg);
+            color: var(--vo-btn-fg);
+            filter: brightness(1.15);
+        }
+        &:disabled {
+            opacity: 0.6;
+        }
+    }
+
+    .o_vo_sent {
+        margin: -6px 0 12px;
+        color: var(--vo-ok);
+        font-size: 0.88rem;
+        font-weight: 600;
+
+        &:empty {
+            display: none;
+        }
+    }
+
+    .o_vo_hint {
+        margin: -6px 0 12px;
+        color: var(--vo-warn);
+        font-size: 0.85rem;
+    }
+
+    .o_vo_edit {
+        padding: 0 4px;
+        font-size: 0.88rem;
+        font-weight: 600;
+        vertical-align: baseline;
+        text-decoration: none;
+        color: var(--vs-accent-ink, var(--bs-link-color));
+    }
+
+    .o_vo_resend_row {
+        margin-top: 12px;
+        text-align: center;
+        color: var(--vo-muted);
+        font-size: 0.88rem;
+
+        .o_vo_timer {
+            display: inline-block;
+            min-width: 2.6em;
+            font-weight: 700;
+            color: var(--vo-ink);
+            font-variant-numeric: tabular-nums;
+        }
+        .o_vo_resend {
+            font-weight: 600;
+            text-decoration: none;
+            color: var(--vs-accent-ink, var(--bs-link-color));
+        }
+    }
+
+    .alert {
+        margin: 14px 0 0;
+        border-radius: var(--vo-radius);
+        font-size: 0.9rem;
+    }
+
+    .o_vo_footer {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 2px;
+        margin-top: 16px;
+        padding-top: 12px;
+        border-top: 1px solid var(--vo-line);
+
+        .btn-link {
+            font-size: 0.9rem;
+            font-weight: 600;
+            text-decoration: none;
+            color: var(--vs-accent-ink, var(--bs-link-color));
+        }
+    }
+
+    &.o_vo_busy .o_vo_card {
+        opacity: 0.65;
+        pointer-events: none;
+    }
+
+    .oi {
+        vertical-align: -0.15em;
+    }
+}
+
+html[data-vs-theme="dark"] .o_vesta_otp {
+    .o_vo_card {
+        box-shadow: 0 10px 34px rgba(0, 0, 0, 0.45);
+    }
+    .alert-danger {
+        background: var(--vs-red-soft, #3a1c22);
+        border-color: transparent;
+        color: var(--vs-red, #ff5c70);
+    }
+    .alert-success {
+        background: var(--vo-ok-soft);
+        border-color: transparent;
+        color: var(--vo-ok);
+    }
+}
+
+// the switch link under the password form
+.oe_login_buttons .o_vo_switch {
+    text-decoration: none;
+    font-weight: 600;
+}
+
+@media (max-width: 575.98px) {
+    .o_vesta_otp {
+        margin: 16px;
+
+        .o_vo_card {
+            padding: 22px 16px 14px;
+            border-radius: var(--vo-radius);
+        }
+        .o_vo_code {
+            font-size: 1.45rem;
+            letter-spacing: 0.35em !important;
+        }
+    }
+}
+
+// /my/account: the verified mobile
+.o_vo_account {
+    border: 1px solid var(--vs-line, var(--bs-border-color));
+    border-radius: var(--vs-radius, 14px);
+    background: var(--vs-card, var(--bs-body-bg));
+
+    .o_vo_account_row {
+        display: flex;
+        align-items: center;
+        gap: 14px;
+        flex-wrap: wrap;
+    }
+    .o_vo_account_icon {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 44px;
+        height: 44px;
+        border-radius: 50%;
+        background: var(--vs-strip, #f5f5f5);
+        font-size: 22px;
+    }
+    .o_vo_account_text {
+        flex: 1 1 200px;
+        min-width: 0;
+    }
+    .o_vo_account_label {
+        font-size: 0.82rem;
+        color: var(--vs-muted, var(--bs-secondary-color));
+    }
+    .o_vo_account_number {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        flex-wrap: wrap;
+        font-size: 1.1rem;
+        font-weight: 700;
+    }
+    .o_vo_account_value[dir="ltr"] {
+        unicode-bidi: isolate;
+    }
+    .o_vo_badge_ok {
+        background: var(--vs-green-soft, #e3f4e8);
+        color: var(--vs-green, #2f8a4c);
+        font-weight: 600;
+    }
+    .o_vo_account_help {
+        font-size: 0.82rem;
+        color: var(--vs-muted, var(--bs-secondary-color));
+    }
+    // the card sits inside the account card: no second frame
+    .o_vesta_otp {
+        margin: 12px 0 0;
+
+        .o_vo_card {
+            padding: 12px 0 0;
+            border: 0;
+            border-radius: 0;
+            box-shadow: none;
+            background: transparent;
+        }
+        // the portal styles every form as a card
+        form {
+            margin: 0 !important;
+            padding: 0 !important;
+            border: 0 !important;
+            background: transparent !important;
+            box-shadow: none !important;
+        }
+    }
+}

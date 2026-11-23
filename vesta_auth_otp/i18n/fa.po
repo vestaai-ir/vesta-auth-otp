@@ -1,0 +1,1073 @@
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 20.0+e-20261109\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-11-23 01:28+0000\n"
+"PO-Revision-Date: 2026-11-23 01:28+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: fa\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: vesta_auth_otp
+#: model:ir.model.fields,help:vesta_auth_otp.field_vesta_auth_otp__phone
+msgid "98 and the 10 digits of the mobile."
+msgstr "۹۸ و ۱۰ رقم شماره‌ی موبایل."
+
+#. module: vesta_auth_otp
+#: model_terms:ir.ui.view,arch_db:vesta_auth_otp.otp_card
+msgid "<i class=\"oi\" data-icon=\"edit\" aria-hidden=\"true\"/> Edit number"
+msgstr "<i class=\"oi\" data-icon=\"edit\" aria-hidden=\"true\"/> ویرایش شماره"
+
+#. module: vesta_auth_otp
+#: model_terms:ir.ui.view,arch_db:vesta_auth_otp.otp_card
+msgid ""
+"<i class=\"oi\" data-icon=\"mail\" aria-hidden=\"true\"/> Log in with email "
+"and password"
+msgstr ""
+"<i class=\"oi\" data-icon=\"mail\" aria-hidden=\"true\"/> ورود با ایمیل و "
+"رمز عبور"
+
+#. module: vesta_auth_otp
+#: model_terms:ir.ui.view,arch_db:vesta_auth_otp.otp_card
+msgid "<i class=\"oi\" data-icon=\"mail\" aria-hidden=\"true\"/> Sign up with email"
+msgstr "<i class=\"oi\" data-icon=\"mail\" aria-hidden=\"true\"/> ثبت‌نام با ایمیل"
+
+#. module: vesta_auth_otp
+#: model_terms:ir.ui.view,arch_db:vesta_auth_otp.otp_card
+msgid "<i class=\"oi\" data-icon=\"refresh\" aria-hidden=\"true\"/> Send the code again"
+msgstr "<i class=\"oi\" data-icon=\"refresh\" aria-hidden=\"true\"/> ارسال دوباره‌ی کد"
+
+#. module: vesta_auth_otp
+#: model_terms:ir.ui.view,arch_db:vesta_auth_otp.otp_card
+msgid ""
+"<i class=\"oi\" data-icon=\"science\" aria-hidden=\"true\"/>\n"
+"                    <span>Test mode: nothing is sent, the code is shown here.</span>"
+msgstr ""
+"<i class=\"oi\" data-icon=\"science\" aria-hidden=\"true\"/>\n"
+"                    <span>حالت آزمایشی: چیزی ارسال نمی‌شود، کد همین‌جا نمایش داده می‌شود.</span>"
+
+#. module: vesta_auth_otp
+#: model_terms:ir.ui.view,arch_db:vesta_auth_otp.login
+msgid ""
+"<i class=\"oi\" data-icon=\"smartphone\" aria-hidden=\"true\"/> Log in with "
+"mobile number"
+msgstr ""
+"<i class=\"oi\" data-icon=\"smartphone\" aria-hidden=\"true\"/> ورود با "
+"شماره‌ی موبایل"
+
+#. module: vesta_auth_otp
+#: model_terms:ir.ui.view,arch_db:vesta_auth_otp.signup
+msgid ""
+"<i class=\"oi\" data-icon=\"smartphone\" aria-hidden=\"true\"/> Sign up with"
+" mobile number"
+msgstr ""
+"<i class=\"oi\" data-icon=\"smartphone\" aria-hidden=\"true\"/> ثبت‌نام با "
+"شماره‌ی موبایل"
+
+#. module: vesta_auth_otp
+#: model_terms:ir.ui.view,arch_db:vesta_auth_otp.res_config_settings_view_form
+msgid ""
+"<i class=\"oi\" data-icon=\"warning\" aria-hidden=\"true\"/>\n"
+"                            In test mode anyone can log in with any number: use it only to try the module."
+msgstr ""
+"<i class=\"oi\" data-icon=\"warning\" aria-hidden=\"true\"/>\n"
+"                            در حالت آزمایشی هر کسی با هر شماره‌ای می‌تواند وارد شود: فقط برای آزمودن ماژول از آن استفاده کنید."
+
+#. module: vesta_auth_otp
+#: model_terms:ir.ui.view,arch_db:vesta_auth_otp.portal_my_details
+msgid ""
+"<span class=\"badge o_vo_badge_ok\">\n"
+"                                        <i class=\"oi\" data-icon=\"verified\" aria-hidden=\"true\"/> Verified\n"
+"                                    </span>"
+msgstr ""
+"<span class=\"badge o_vo_badge_ok\">\n"
+"                                        <i class=\"oi\" data-icon=\"verified\" aria-hidden=\"true\"/> تأییدشده\n"
+"                                    </span>"
+
+#. module: vesta_auth_otp
+#: model_terms:ir.ui.view,arch_db:vesta_auth_otp.portal_my_details
+msgid "<span class=\"o_vo_account_value\">No verified mobile yet</span>"
+msgstr "<span class=\"o_vo_account_value\">هنوز موبایل تأییدشده‌ای ندارید</span>"
+
+#. module: vesta_auth_otp
+#: model_terms:ir.ui.view,arch_db:vesta_auth_otp.otp_card
+msgid ""
+"<span class=\"o_vo_wait\">Send again in <span class=\"o_vo_timer\" "
+"dir=\"ltr\">0:59</span></span>"
+msgstr ""
+"<span class=\"o_vo_wait\">ارسال دوباره تا <span class=\"o_vo_timer\" "
+"dir=\"ltr\">۰:۵۹</span></span>"
+
+#. module: vesta_auth_otp
+#: model_terms:ir.ui.view,arch_db:vesta_auth_otp.otp_card
+msgid "<span>Create the account and log in</span>"
+msgstr "<span>ساخت حساب و ورود</span>"
+
+#. module: vesta_auth_otp
+#: model_terms:ir.ui.view,arch_db:vesta_auth_otp.otp_card
+msgid "<span>Get the code</span>"
+msgstr "<span>دریافت کد</span>"
+
+#. module: vesta_auth_otp
+#: model_terms:ir.ui.view,arch_db:vesta_auth_otp.otp_card
+msgid ""
+"<span>The code was sent to</span>\n"
+"                        <b class=\"o_vo_phone_display\" dir=\"ltr\"/>"
+msgstr ""
+"<span>کد به این شماره ارسال شد:</span>\n"
+"                        <b class=\"o_vo_phone_display\" dir=\"ltr\"/>"
+
+#. module: vesta_auth_otp
+#: model_terms:ir.ui.view,arch_db:vesta_auth_otp.res_config_settings_view_form
+msgid ""
+"A code dies after too many wrong attempts; numbers and addresses that ask "
+"for too many codes wait."
+msgstr ""
+"کد پس از تلاش‌های نادرست زیاد باطل می‌شود؛ شماره‌ها و نشانی‌هایی که کد زیادی"
+" بخواهند باید صبر کنند."
+
+#. module: vesta_auth_otp
+#. odoo-python
+#: code:addons/vesta_auth_otp/models/res_config_settings.py:0
+msgid "A code lives 30 to 900 seconds."
+msgstr "اعتبار کد ۳۰ تا ۹۰۰ ثانیه است."
+
+#. module: vesta_auth_otp
+#: model_terms:ir.ui.view,arch_db:vesta_auth_otp.portal_my_details
+msgid "Add a mobile"
+msgstr "افزودن موبایل"
+
+#. module: vesta_auth_otp
+#: model_terms:ir.ui.view,arch_db:vesta_auth_otp.otp_card
+msgid "Already have an account?"
+msgstr "حساب دارید؟ وارد شوید"
+
+#. module: vesta_auth_otp
+#. odoo-python
+#: code:addons/vesta_auth_otp/models/res_config_settings.py:0
+#: model:ir.model.fields,field_description:vesta_auth_otp.field_vesta_auth_otp__bale_state
+msgid "Bale"
+msgstr "بله"
+
+#. module: vesta_auth_otp
+#. odoo-python
+#: code:addons/vesta_auth_otp/models/res_config_settings.py:0
+msgid "Bale (test mode)"
+msgstr "بله (حالت آزمایشی)"
+
+#. module: vesta_auth_otp
+#: model:ir.model.fields,field_description:vesta_auth_otp.field_vesta_auth_otp__bale_info
+msgid "Bale Details"
+msgstr "جزئیات بله"
+
+#. module: vesta_auth_otp
+#: model_terms:ir.ui.view,arch_db:vesta_auth_otp.vesta_auth_otp_view_search
+msgid "Bale Failed"
+msgstr "بله ناموفق"
+
+#. module: vesta_auth_otp
+#. odoo-python
+#: code:addons/vesta_auth_otp/models/res_config_settings.py:0
+msgid "Bale could not be reached, or the API key was rejected."
+msgstr "به بله دسترسی نبود، یا کلید API پذیرفته نشد."
+
+#. module: vesta_auth_otp
+#. odoo-python
+#: code:addons/vesta_auth_otp/models/res_config_settings.py:0
+msgid "Bale had an internal error; try again later."
+msgstr "بله خطای داخلی داشت؛ بعداً دوباره امتحان کنید."
+
+#. module: vesta_auth_otp
+#. odoo-python
+#: code:addons/vesta_auth_otp/models/res_config_settings.py:0
+msgid "Bale rejected the request; check the bot ID."
+msgstr "بله درخواست را نپذیرفت؛ شناسه‌ی بات را بررسی کنید."
+
+#. module: vesta_auth_otp
+#: model:ir.model.fields,field_description:vesta_auth_otp.field_res_config_settings__vesta_otp_bale_bot_id
+msgid "Bot ID"
+msgstr "شناسه‌ی بات"
+
+#. module: vesta_auth_otp
+#: model:ir.model.fields,field_description:vesta_auth_otp.field_vesta_auth_otp__challenge
+msgid "Challenge"
+msgstr "شناسه‌ی درخواست"
+
+#. module: vesta_auth_otp
+#: model_terms:ir.ui.view,arch_db:vesta_auth_otp.portal_my_details
+msgid "Change"
+msgstr "تغییر"
+
+#. module: vesta_auth_otp
+#: model:ir.model.fields.selection,name:vesta_auth_otp.selection__vesta_auth_otp__purpose__change
+msgid "Change of mobile"
+msgstr "تغییر شماره‌ی موبایل"
+
+#. module: vesta_auth_otp
+#: model_terms:ir.ui.view,arch_db:vesta_auth_otp.otp_card
+msgid "Change your mobile number"
+msgstr "تغییر شماره‌ی موبایل"
+
+#. module: vesta_auth_otp
+#: model_terms:ir.ui.view,arch_db:vesta_auth_otp.res_config_settings_view_form
+msgid "Code"
+msgstr "Code"
+
+#. module: vesta_auth_otp
+#: model:ir.model.fields,field_description:vesta_auth_otp.field_vesta_auth_otp__code_hash
+msgid "Code Hash"
+msgstr "درهم‌سازی کد"
+
+#. module: vesta_auth_otp
+#: model:ir.model.fields,field_description:vesta_auth_otp.field_res_config_settings__vesta_otp_code_length
+msgid "Code Length"
+msgstr "طول کد"
+
+#. module: vesta_auth_otp
+#: model:ir.model.fields,field_description:vesta_auth_otp.field_res_config_settings__vesta_otp_expiry
+msgid "Code Lifetime (seconds)"
+msgstr "مدت اعتبار کد (ثانیه)"
+
+#. module: vesta_auth_otp
+#: model:ir.model.fields.selection,name:vesta_auth_otp.selection__vesta_auth_otp__state__verified
+msgid "Code verified"
+msgstr "کد تأیید شد"
+
+#. module: vesta_auth_otp
+#: model_terms:ir.ui.view,arch_db:vesta_auth_otp.res_config_settings_view_form
+msgid "Codes"
+msgstr "کدها"
+
+#. module: vesta_auth_otp
+#: model:ir.model.fields,field_description:vesta_auth_otp.field_res_config_settings__vesta_otp_ip_limit
+msgid "Codes per IP Address per Hour"
+msgstr "کد برای هر نشانی IP در ساعت"
+
+#. module: vesta_auth_otp
+#: model:ir.model.fields,field_description:vesta_auth_otp.field_res_config_settings__vesta_otp_phone_limit
+msgid "Codes per Number per Hour"
+msgstr "کد برای هر شماره در ساعت"
+
+#. module: vesta_auth_otp
+#: model:ir.model.fields,field_description:vesta_auth_otp.field_res_config_settings__vesta_otp_allow_internal
+msgid "Colleagues Too"
+msgstr "همکاران هم"
+
+#. module: vesta_auth_otp
+#: model:ir.model,name:vesta_auth_otp.model_res_config_settings
+msgid "Config Settings"
+msgstr "تنظیمات پیکربندی"
+
+#. module: vesta_auth_otp
+#: model_terms:ir.ui.view,arch_db:vesta_auth_otp.otp_card
+msgid "Confirm and log in"
+msgstr "تأیید و ورود"
+
+#. module: vesta_auth_otp
+#: model_terms:ir.ui.view,arch_db:vesta_auth_otp.otp_card
+msgid "Confirm the number"
+msgstr "تأیید شماره"
+
+#. module: vesta_auth_otp
+#: model:ir.model,name:vesta_auth_otp.model_res_partner
+msgid "Contact"
+msgstr "مخاطب"
+
+#. module: vesta_auth_otp
+#: model:ir.model,website_form_label:vesta_auth_otp.model_res_partner
+msgid "Create a Customer"
+msgstr "ایجاد مشتری"
+
+#. module: vesta_auth_otp
+#: model_terms:ir.ui.view,arch_db:vesta_auth_otp.otp_card
+msgid "Create your account"
+msgstr "ساخت حساب کاربری"
+
+#. module: vesta_auth_otp
+#: model:ir.model.fields,field_description:vesta_auth_otp.field_vesta_auth_otp__create_uid
+msgid "Created by"
+msgstr "ایجاد شده توسط"
+
+#. module: vesta_auth_otp
+#: model:ir.model.fields,field_description:vesta_auth_otp.field_vesta_auth_otp__create_date
+msgid "Created on"
+msgstr "ایجاد شده در"
+
+#. module: vesta_auth_otp
+#: model:ir.module.module,summary:base.module_vesta_auth_otp
+msgid ""
+"Customers log in and sign up on the website with their mobile number and a "
+"one-time code, sent by SMS (sms.ir) and Bale at the same time"
+msgstr ""
+"ورود و ثبت‌نام مشتری‌ها در وب‌سایت با شماره‌ی موبایل و کد یک‌بارمصرف که "
+"هم‌زمان با پیامک (sms.ir) و بله ارسال می‌شود"
+
+#. module: vesta_auth_otp
+#: model:ir.model.fields,help:vesta_auth_otp.field_res_config_settings__vesta_otp_enabled
+msgid ""
+"Customers log in and sign up on the website with their mobile number and a "
+"one-time code."
+msgstr ""
+"مشتری‌ها با شماره‌ی موبایل و کد یک‌بارمصرف وارد وب‌سایت می‌شوند یا ثبت‌نام "
+"می‌کنند."
+
+#. module: vesta_auth_otp
+#: model_terms:ir.ui.view,arch_db:vesta_auth_otp.res_config_settings_view_form
+msgid ""
+"Customers log in and sign up with their mobile number and a one-time code "
+"sent by SMS and Bale at the same time. The password login stays available."
+msgstr ""
+"مشتری‌ها با شماره‌ی موبایل و کد یک‌بارمصرفی که هم‌زمان با پیامک و بله ارسال "
+"می‌شود وارد می‌شوند یا ثبت‌نام می‌کنند. ورود با رمز عبور همچنان در دسترس "
+"است."
+
+#. module: vesta_auth_otp
+#: model_terms:ir.ui.view,arch_db:vesta_auth_otp.vesta_auth_otp_view_list
+msgid "Date"
+msgstr "تاریخ"
+
+#. module: vesta_auth_otp
+#: model:ir.model.fields.selection,name:vesta_auth_otp.selection__vesta_auth_otp__state__dead
+msgid "Dead"
+msgstr "باطل"
+
+#. module: vesta_auth_otp
+#: model:ir.model.fields,field_description:vesta_auth_otp.field_ir_http__display_name
+#: model:ir.model.fields,field_description:vesta_auth_otp.field_res_config_settings__display_name
+#: model:ir.model.fields,field_description:vesta_auth_otp.field_res_partner__display_name
+#: model:ir.model.fields,field_description:vesta_auth_otp.field_res_users__display_name
+#: model:ir.model.fields,field_description:vesta_auth_otp.field_sms_sms__display_name
+#: model:ir.model.fields,field_description:vesta_auth_otp.field_vesta_auth_otp__display_name
+msgid "Display Name"
+msgstr "نام نمایشی"
+
+#. module: vesta_auth_otp
+#. odoo-python
+#: code:addons/vesta_auth_otp/models/vesta_auth_otp.py:0
+msgid "Enter a valid mobile number, like 0912 345 6789."
+msgstr "یک شماره‌ی موبایل درست وارد کنید، مثل ۰۹۱۲ ۳۴۵ ۶۷۸۹."
+
+#. module: vesta_auth_otp
+#. odoo-python
+#: code:addons/vesta_auth_otp/models/res_config_settings.py:0
+msgid "Enter the Safir API key and the bot ID (a number) of Bale first."
+msgstr "اول کلید API سفیر و شناسه‌ی بات بله (عدد) را وارد کنید."
+
+#. module: vesta_auth_otp
+#: model_terms:ir.ui.view,arch_db:vesta_auth_otp.otp_card
+msgid "Enter the code"
+msgstr "کد را وارد کنید"
+
+#. module: vesta_auth_otp
+#: model_terms:ir.ui.view,arch_db:vesta_auth_otp.otp_card
+msgid "Enter the new number; we send it a code to make sure it is yours."
+msgstr ""
+"شماره‌ی تازه را وارد کنید؛ برای اطمینان از این‌که مال شماست، به آن کد "
+"می‌فرستیم."
+
+#. module: vesta_auth_otp
+#. odoo-python
+#: code:addons/vesta_auth_otp/models/res_config_settings.py:0
+msgid "Enter the test mobile (an Iranian mobile number) first."
+msgstr "اول موبایل آزمایشی (یک شماره‌ی موبایل ایرانی) را وارد کنید."
+
+#. module: vesta_auth_otp
+#. odoo-python
+#: code:addons/vesta_auth_otp/models/vesta_auth_otp.py:0
+msgid "Enter your full name."
+msgstr "نام و نام خانوادگی خود را وارد کنید."
+
+#. module: vesta_auth_otp
+#: model_terms:ir.ui.view,arch_db:vesta_auth_otp.otp_card
+msgid "Enter your mobile number; we send you a one-time code."
+msgstr "شماره‌ی موبایل خود را وارد کنید؛ یک کد یک‌بارمصرف برایتان می‌فرستیم."
+
+#. module: vesta_auth_otp
+#: model_terms:ir.actions.act_window,help:vesta_auth_otp.action_vesta_auth_otp
+msgid ""
+"Every code asked for on the website is listed here for a day, with how it "
+"was sent. The codes themselves are never stored."
+msgstr ""
+"هر کدی که در وب‌سایت درخواست شود، همراه با چگونگی ارسالش، یک روز این‌جا "
+"می‌ماند. خود کدها هرگز ذخیره نمی‌شوند."
+
+#. module: vesta_auth_otp
+#: model:ir.model.fields,field_description:vesta_auth_otp.field_vesta_auth_otp__expire_at
+msgid "Expires"
+msgstr "انقضا"
+
+#. module: vesta_auth_otp
+#: model:ir.model.fields.selection,name:vesta_auth_otp.selection__vesta_auth_otp__bale_state__failed
+#: model:ir.model.fields.selection,name:vesta_auth_otp.selection__vesta_auth_otp__sms_state__failed
+msgid "Failed"
+msgstr "ناموفق"
+
+#. module: vesta_auth_otp
+#: model_terms:ir.ui.view,arch_db:vesta_auth_otp.otp_card
+msgid "Full name"
+msgstr "نام و نام خانوادگی"
+
+#. module: vesta_auth_otp
+#: model_terms:ir.ui.view,arch_db:vesta_auth_otp.res_config_settings_view_form
+msgid "Get the key and the bot ID in Bale Business"
+msgstr "کلید و شناسه‌ی بات را از بله کسب‌وکار بگیرید"
+
+#. module: vesta_auth_otp
+#: model:ir.model,name:vesta_auth_otp.model_ir_http
+msgid "HTTP Routing"
+msgstr "مسیریابی HTTP"
+
+#. module: vesta_auth_otp
+#: model:ir.model.fields,field_description:vesta_auth_otp.field_ir_http__id
+#: model:ir.model.fields,field_description:vesta_auth_otp.field_res_config_settings__id
+#: model:ir.model.fields,field_description:vesta_auth_otp.field_res_partner__id
+#: model:ir.model.fields,field_description:vesta_auth_otp.field_res_users__id
+#: model:ir.model.fields,field_description:vesta_auth_otp.field_sms_sms__id
+#: model:ir.model.fields,field_description:vesta_auth_otp.field_vesta_auth_otp__id
+msgid "ID"
+msgstr "شناسه"
+
+#. module: vesta_auth_otp
+#: model:ir.model.fields,field_description:vesta_auth_otp.field_vesta_auth_otp__ip
+msgid "IP Address"
+msgstr "نشانی IP"
+
+#. module: vesta_auth_otp
+#: model:ir.model.fields,help:vesta_auth_otp.field_res_config_settings__vesta_otp_allow_internal
+msgid ""
+"Internal users may log in with a code too (two-factor authentication still "
+"applies). Off: only customers (portal users)."
+msgstr ""
+"کاربران داخلی هم می‌توانند با کد وارد شوند (ورود دومرحله‌ای همچنان اعمال "
+"می‌شود). خاموش: فقط مشتری‌ها (کاربران پرتال)."
+
+#. module: vesta_auth_otp
+#: model:ir.model.fields,field_description:vesta_auth_otp.field_vesta_auth_otp__write_uid
+msgid "Last Updated by"
+msgstr "آخرین به‌روزرسانی توسط"
+
+#. module: vesta_auth_otp
+#: model:ir.model.fields,field_description:vesta_auth_otp.field_vesta_auth_otp__write_date
+msgid "Last Updated on"
+msgstr "آخرین به‌روزرسانی در"
+
+#. module: vesta_auth_otp
+#: model_terms:ir.ui.view,arch_db:vesta_auth_otp.res_config_settings_view_form
+msgid ""
+"Length and lifetime of the codes, and when a new code may be asked for."
+msgstr "طول و مدت اعتبار کدها، و این‌که کی می‌توان کد تازه خواست."
+
+#. module: vesta_auth_otp
+#: model_terms:ir.ui.view,arch_db:vesta_auth_otp.res_config_settings_view_form
+msgid "Limits"
+msgstr "محدودیت‌ها"
+
+#. module: vesta_auth_otp
+#. odoo-python
+#: code:addons/vesta_auth_otp/controllers/main.py:0
+msgid "Log in first."
+msgstr "اول وارد شوید."
+
+#. module: vesta_auth_otp
+#: model_terms:ir.ui.view,arch_db:vesta_auth_otp.otp_card
+msgid "Log in or sign up"
+msgstr "ورود یا ثبت‌نام"
+
+#. module: vesta_auth_otp
+#: model_terms:ir.ui.view,arch_db:vesta_auth_otp.vesta_auth_otp_view_search
+msgid "Logged In"
+msgstr "وارد شد"
+
+#. module: vesta_auth_otp
+#: model:ir.actions.act_window,name:vesta_auth_otp.action_vesta_auth_otp
+#: model:ir.ui.menu,name:vesta_auth_otp.menu_vesta_auth_otp
+msgid "Login Codes"
+msgstr "کدهای ورود"
+
+#. module: vesta_auth_otp
+#: model:ir.model.fields,field_description:vesta_auth_otp.field_res_config_settings__vesta_otp_test_mobile
+msgid "Login Test Mobile"
+msgstr "موبایل آزمایشی ورود"
+
+#. module: vesta_auth_otp
+#: model_terms:ir.ui.view,arch_db:vesta_auth_otp.res_config_settings_view_form
+msgid "Login codes"
+msgstr "کدهای ورود"
+
+#. module: vesta_auth_otp
+#: model_terms:ir.ui.view,arch_db:vesta_auth_otp.portal_my_details
+msgid "Login mobile"
+msgstr "موبایل ورود"
+
+#. module: vesta_auth_otp
+#: model:ir.model.fields.selection,name:vesta_auth_otp.selection__vesta_auth_otp__purpose__login
+msgid "Login or sign-up"
+msgstr "ورود یا ثبت‌نام"
+
+#. module: vesta_auth_otp
+#: model:ir.model.fields,field_description:vesta_auth_otp.field_res_config_settings__vesta_otp_enabled
+#: model_terms:ir.ui.view,arch_db:vesta_auth_otp.res_config_settings_view_form
+msgid "Login with Mobile"
+msgstr "ورود با موبایل"
+
+#. module: vesta_auth_otp
+#: model:ir.actions.server,name:vesta_auth_otp.ir_cron_purge_codes_ir_actions_server
+msgid "Login with Mobile: delete old codes"
+msgstr "ورود با موبایل: حذف کدهای قدیمی"
+
+#. module: vesta_auth_otp
+#. odoo-python
+#: code:addons/vesta_auth_otp/controllers/main.py:0
+msgid "Login with mobile is not enabled."
+msgstr "ورود با موبایل فعال نیست."
+
+#. module: vesta_auth_otp
+#: model:ir.model.fields,field_description:vesta_auth_otp.field_vesta_auth_otp__phone
+msgid "Mobile"
+msgstr "موبایل"
+
+#. module: vesta_auth_otp
+#: model:ir.model,name:vesta_auth_otp.model_vesta_auth_otp
+msgid "Mobile Login Code"
+msgstr "کد ورود با موبایل"
+
+#. module: vesta_auth_otp
+#: model_terms:ir.ui.view,arch_db:vesta_auth_otp.otp_card
+msgid "Mobile number"
+msgstr "شماره‌ی موبایل"
+
+#. module: vesta_auth_otp
+#. odoo-python
+#: code:addons/vesta_auth_otp/controllers/main.py:0
+#: code:addons/vesta_auth_otp/models/vesta_auth_otp.py:0
+msgid "No account was found with this mobile number."
+msgstr "حسابی با این شماره‌ی موبایل پیدا نشد."
+
+#. module: vesta_auth_otp
+#: model_terms:ir.actions.act_window,help:vesta_auth_otp.action_vesta_auth_otp
+msgid "No login code was asked for yet"
+msgstr "هنوز کد ورودی درخواست نشده است"
+
+#. module: vesta_auth_otp
+#: model:ir.model.fields,field_description:vesta_auth_otp.field_res_partner__vesta_otp_mobile
+#: model:ir.model.fields,field_description:vesta_auth_otp.field_res_users__vesta_otp_mobile
+msgid "Normalized Mobile"
+msgstr "موبایل استاندارد"
+
+#. module: vesta_auth_otp
+#: model:ir.model.fields,help:vesta_auth_otp.field_res_config_settings__vesta_otp_test_mode
+#: model_terms:ir.ui.view,arch_db:vesta_auth_otp.res_config_settings_view_form
+msgid ""
+"Nothing is sent: the code is shown on the login page and written in the "
+"server log. Turn it off once sms.ir or Bale is set up; never leave it on for"
+" real customers."
+msgstr ""
+"چیزی ارسال نمی‌شود: کد در صفحه‌ی ورود نمایش داده و در گزارش سرور نوشته "
+"می‌شود. پس از راه‌اندازی sms.ir یا بله خاموشش کنید؛ هرگز برای مشتری‌های "
+"واقعی روشن نگذارید."
+
+#. module: vesta_auth_otp
+#: model:ir.model.fields.selection,name:vesta_auth_otp.selection__vesta_auth_otp__bale_state__off
+#: model:ir.model.fields.selection,name:vesta_auth_otp.selection__vesta_auth_otp__sms_state__off
+msgid "Off"
+msgstr "خاموش"
+
+#. module: vesta_auth_otp
+#: model_terms:ir.ui.view,arch_db:vesta_auth_otp.otp_card
+msgid "One-time code"
+msgstr "کد یک‌بارمصرف"
+
+#. module: vesta_auth_otp
+#: model:ir.model.fields,help:vesta_auth_otp.field_res_config_settings__vesta_otp_sms_template_id
+msgid ""
+"Optional: the id of an approved «verify» template of sms.ir (fast send). "
+"Empty: a plain SMS."
+msgstr ""
+"اختیاری: شناسه‌ی یک قالب تأییدشده‌ی «ارسال سریع» در sms.ir. خالی: پیامک "
+"ساده."
+
+#. module: vesta_auth_otp
+#: model:ir.model,name:vesta_auth_otp.model_sms_sms
+msgid "Outgoing SMS"
+msgstr "پیامک خروجی"
+
+#. module: vesta_auth_otp
+#: model:ir.model.fields,field_description:vesta_auth_otp.field_res_partner__vesta_otp_phone_untrusted
+#: model:ir.model.fields,field_description:vesta_auth_otp.field_res_users__vesta_otp_phone_untrusted
+msgid "Phone Typed on the Website"
+msgstr "تلفن واردشده در وب‌سایت"
+
+#. module: vesta_auth_otp
+#. odoo-python
+#: code:addons/vesta_auth_otp/models/vesta_auth_otp.py:0
+msgid "Please try again."
+msgstr "لطفاً دوباره امتحان کنید."
+
+#. module: vesta_auth_otp
+#: model:ir.model.fields,field_description:vesta_auth_otp.field_vesta_auth_otp__purpose
+msgid "Purpose"
+msgstr "کاربرد"
+
+#. module: vesta_auth_otp
+#: model:ir.model.fields,field_description:vesta_auth_otp.field_res_config_settings__vesta_otp_resend_delay
+msgid "Resend After (seconds)"
+msgstr "ارسال دوباره پس از (ثانیه)"
+
+#. module: vesta_auth_otp
+#. odoo-python
+#: code:addons/vesta_auth_otp/models/res_config_settings.py:0
+#: model:ir.model.fields,field_description:vesta_auth_otp.field_vesta_auth_otp__sms_state
+msgid "SMS"
+msgstr "پیامک"
+
+#. module: vesta_auth_otp
+#. odoo-python
+#: code:addons/vesta_auth_otp/models/res_config_settings.py:0
+msgid "SMS (test mode)"
+msgstr "پیامک (حالت آزمایشی)"
+
+#. module: vesta_auth_otp
+#: model:ir.model.fields,field_description:vesta_auth_otp.field_vesta_auth_otp__sms_info
+msgid "SMS Details"
+msgstr "جزئیات پیامک"
+
+#. module: vesta_auth_otp
+#: model_terms:ir.ui.view,arch_db:vesta_auth_otp.vesta_auth_otp_view_search
+msgid "SMS Failed"
+msgstr "پیامک ناموفق"
+
+#. module: vesta_auth_otp
+#: model:ir.model.fields,field_description:vesta_auth_otp.field_res_config_settings__vesta_otp_bale_api_key
+msgid "Safir API Key"
+msgstr "کلید API سفیر"
+
+#. module: vesta_auth_otp
+#: model_terms:ir.ui.view,arch_db:vesta_auth_otp.res_config_settings_view_form
+msgid ""
+"Safir, the code service of Bale: Bale sends the code from its own "
+"verification bot to the Bale account of the number."
+msgstr ""
+"سفیر، سرویس کد بله: بله کد را از بات تأیید خودش به حساب بله‌ی همان شماره "
+"می‌فرستد."
+
+#. module: vesta_auth_otp
+#: model:ir.model.fields,field_description:vesta_auth_otp.field_vesta_auth_otp__salt
+msgid "Salt"
+msgstr "نمک"
+
+#. module: vesta_auth_otp
+#: model_terms:ir.ui.view,arch_db:vesta_auth_otp.res_config_settings_view_form
+msgid "Send a test SMS"
+msgstr "ارسال پیامک آزمایشی"
+
+#. module: vesta_auth_otp
+#: model_terms:ir.ui.view,arch_db:vesta_auth_otp.res_config_settings_view_form
+msgid "Send a test message on Bale"
+msgstr "ارسال پیام آزمایشی در بله"
+
+#. module: vesta_auth_otp
+#: model:ir.model.fields,field_description:vesta_auth_otp.field_res_config_settings__vesta_otp_sms_enabled
+msgid "Send by SMS"
+msgstr "ارسال با پیامک"
+
+#. module: vesta_auth_otp
+#: model:ir.model.fields,field_description:vesta_auth_otp.field_res_config_settings__vesta_otp_bale_enabled
+msgid "Send on Bale"
+msgstr "ارسال در بله"
+
+#. module: vesta_auth_otp
+#: model:ir.model.fields.selection,name:vesta_auth_otp.selection__vesta_auth_otp__bale_state__sent
+#: model:ir.model.fields.selection,name:vesta_auth_otp.selection__vesta_auth_otp__sms_state__sent
+msgid "Sent"
+msgstr "ارسال شد"
+
+#. module: vesta_auth_otp
+#: model:ir.model.fields,field_description:vesta_auth_otp.field_vesta_auth_otp__session_hash
+msgid "Session Hash"
+msgstr "درهم‌سازی نشست"
+
+#. module: vesta_auth_otp
+#: model_terms:ir.ui.view,arch_db:vesta_auth_otp.otp_card
+msgid "Sign up with your mobile"
+msgstr "ثبت‌نام با موبایل"
+
+#. module: vesta_auth_otp
+#: model:ir.model.fields,field_description:vesta_auth_otp.field_vesta_auth_otp__state
+msgid "State"
+msgstr "وضعیت"
+
+#. module: vesta_auth_otp
+#: model:ir.model.fields,field_description:vesta_auth_otp.field_res_config_settings__vesta_otp_sms_template_param
+msgid "Template Parameter"
+msgstr "پارامتر قالب"
+
+#. module: vesta_auth_otp
+#: model_terms:ir.ui.view,arch_db:vesta_auth_otp.res_config_settings_view_form
+msgid "Test Mobile"
+msgstr "موبایل آزمایشی"
+
+#. module: vesta_auth_otp
+#: model:ir.model.fields,field_description:vesta_auth_otp.field_res_config_settings__vesta_otp_test_mode
+msgid "Test Mode"
+msgstr "حالت آزمایشی"
+
+#. module: vesta_auth_otp
+#. odoo-python
+#: code:addons/vesta_auth_otp/models/res_config_settings.py:0
+msgid "Test code %(code)s sent to %(phone)s (message %(id)s)."
+msgstr "کد آزمایشی %(code)s به %(phone)s ارسال شد (پیام %(id)s)."
+
+#. module: vesta_auth_otp
+#. odoo-python
+#: code:addons/vesta_auth_otp/models/res_config_settings.py:0
+msgid "Test code %(code)s sent to %(phone)s."
+msgstr "کد آزمایشی %(code)s به %(phone)s ارسال شد."
+
+#. module: vesta_auth_otp
+#: model:ir.model.fields.selection,name:vesta_auth_otp.selection__vesta_auth_otp__bale_state__test
+#: model:ir.model.fields.selection,name:vesta_auth_otp.selection__vesta_auth_otp__sms_state__test
+msgid "Test mode"
+msgstr "حالت آزمایشی"
+
+#. module: vesta_auth_otp
+#. odoo-python
+#: code:addons/vesta_auth_otp/models/res_config_settings.py:0
+msgid "Test mode: nothing was sent. The SMS to %(phone)s would read: %(text)s"
+msgstr "حالت آزمایشی: چیزی ارسال نشد. پیامک %(phone)s این می‌شد: %(text)s"
+
+#. module: vesta_auth_otp
+#. odoo-python
+#: code:addons/vesta_auth_otp/models/res_config_settings.py:0
+msgid ""
+"Test mode: nothing was sent. The settings look right; Bale would get the "
+"code %(code)s for %(phone)s. Turn test mode off to send a real test message."
+msgstr ""
+"حالت آزمایشی: چیزی ارسال نشد. تنظیمات درست به نظر می‌رسد؛ بله کد %(code)s را"
+" برای %(phone)s می‌فرستاد. برای ارسال پیام آزمایشی واقعی، حالت آزمایشی را "
+"خاموش کنید."
+
+#. module: vesta_auth_otp
+#. odoo-python
+#: code:addons/vesta_auth_otp/models/vesta_auth_otp.py:0
+msgid "Test mode: nothing was sent. Your code is %(code)s."
+msgstr "حالت آزمایشی: چیزی ارسال نشد. کد شما %(code)s است."
+
+#. module: vesta_auth_otp
+#. odoo-python
+#: code:addons/vesta_auth_otp/models/res_config_settings.py:0
+msgid "The Safir account has no credit."
+msgstr "حساب سفیر اعتبار ندارد."
+
+#. module: vesta_auth_otp
+#. odoo-python
+#: code:addons/vesta_auth_otp/models/res_config_settings.py:0
+msgid "The Safir account reached its contact limit."
+msgstr "حساب سفیر به سقف مخاطبانش رسیده است."
+
+#. module: vesta_auth_otp
+#. odoo-python
+#: code:addons/vesta_auth_otp/models/vesta_auth_otp.py:0
+msgid "The account could not be created. Try again, or contact us."
+msgstr "ساخت حساب ممکن نشد. دوباره امتحان کنید یا با ما تماس بگیرید."
+
+#. module: vesta_auth_otp
+#. odoo-python
+#: code:addons/vesta_auth_otp/models/res_config_settings.py:0
+msgid "The bot ID of Bale is a number."
+msgstr "شناسه‌ی بات بله عدد است."
+
+#. module: vesta_auth_otp
+#. odoo-python
+#: code:addons/vesta_auth_otp/models/vesta_auth_otp.py:0
+msgid ""
+"The code could not be sent. Try again in a few minutes, or log in with your "
+"email and password."
+msgstr ""
+"ارسال کد ممکن نشد. چند دقیقه‌ی دیگر دوباره امتحان کنید، یا با ایمیل و رمز "
+"عبور وارد شوید."
+
+#. module: vesta_auth_otp
+#. odoo-python
+#: code:addons/vesta_auth_otp/models/res_config_settings.py:0
+msgid "The code has 4 to 6 digits."
+msgstr "کد ۴ تا ۶ رقم دارد."
+
+#. module: vesta_auth_otp
+#. odoo-python
+#: code:addons/vesta_auth_otp/models/vesta_auth_otp.py:0
+msgid "The code has expired. Ask for a new one."
+msgstr "کد منقضی شده است. کد تازه بخواهید."
+
+#. module: vesta_auth_otp
+#. odoo-python
+#: code:addons/vesta_auth_otp/models/vesta_auth_otp.py:0
+msgid "The code was sent by SMS and Bale."
+msgstr "کد به پیامک و بله ارسال شد."
+
+#. module: vesta_auth_otp
+#. odoo-python
+#: code:addons/vesta_auth_otp/models/vesta_auth_otp.py:0
+msgid "The code was sent by SMS."
+msgstr "کد با پیامک ارسال شد."
+
+#. module: vesta_auth_otp
+#. odoo-python
+#: code:addons/vesta_auth_otp/models/vesta_auth_otp.py:0
+msgid "The code was sent on Bale."
+msgstr "کد در بله ارسال شد."
+
+#. module: vesta_auth_otp
+#. odoo-python
+#: code:addons/vesta_auth_otp/models/res_config_settings.py:0
+msgid "The limits are at least 1."
+msgstr "محدودیت‌ها دست‌کم ۱ هستند."
+
+#. module: vesta_auth_otp
+#: model:ir.model.fields,help:vesta_auth_otp.field_res_partner__vesta_otp_verified_mobile
+#: model:ir.model.fields,help:vesta_auth_otp.field_res_users__vesta_otp_verified_mobile
+msgid ""
+"The mobile number this contact proved with a login code (98 and 10 digits)."
+msgstr "شماره‌ی موبایلی که این مخاطب با کد ورود تأیید کرده است (۹۸ و ۱۰ رقم)."
+
+#. module: vesta_auth_otp
+#: model:ir.model.fields,help:vesta_auth_otp.field_res_config_settings__vesta_otp_sms_template_param
+msgid ""
+"The name of the parameter of the template that receives the code (#Code# in "
+"the template: Code)."
+msgstr "نام پارامتری از قالب که کد را می‌گیرد (#Code# در قالب: Code)."
+
+#. module: vesta_auth_otp
+#. odoo-python
+#: code:addons/vesta_auth_otp/models/res_config_settings.py:0
+msgid "The number is not valid for Bale."
+msgstr "شماره برای بله معتبر نیست."
+
+#. module: vesta_auth_otp
+#: model_terms:ir.ui.view,arch_db:vesta_auth_otp.res_config_settings_view_form
+msgid "The number that receives the test SMS and the test Bale message."
+msgstr "شماره‌ای که پیامک آزمایشی و پیام آزمایشی بله را دریافت می‌کند."
+
+#. module: vesta_auth_otp
+#: model:ir.model.fields,help:vesta_auth_otp.field_res_partner__vesta_otp_mobile
+#: model:ir.model.fields,help:vesta_auth_otp.field_res_users__vesta_otp_mobile
+msgid ""
+"The phone as 98 and 10 digits when it is an Iranian mobile, to find the "
+"account of a login code."
+msgstr ""
+"تلفن به شکل ۹۸ و ۱۰ رقم، وقتی موبایل ایرانی باشد؛ برای پیدا کردن حسابِ یک کد"
+" ورود."
+
+#. module: vesta_auth_otp
+#: model:ir.model.fields,help:vesta_auth_otp.field_res_partner__vesta_otp_phone_untrusted
+#: model:ir.model.fields,help:vesta_auth_otp.field_res_users__vesta_otp_phone_untrusted
+msgid ""
+"The phone was set on the website (checkout, portal): it does not open an "
+"account with a login code until it is verified."
+msgstr ""
+"این تلفن در وب‌سایت (تسویه‌حساب، پرتال) وارد شده است و تا تأیید نشود، با کد "
+"ورود حسابی را باز نمی‌کند."
+
+#. module: vesta_auth_otp
+#. odoo-python
+#: code:addons/vesta_auth_otp/models/res_config_settings.py:0
+msgid "The resend delay is 0 to 600 seconds."
+msgstr "فاصله‌ی ارسال دوباره ۰ تا ۶۰۰ ثانیه است."
+
+#. module: vesta_auth_otp
+#. odoo-python
+#: code:addons/vesta_auth_otp/models/res_config_settings.py:0
+msgid "The template ID of sms.ir is a number."
+msgstr "شناسه‌ی قالب sms.ir عدد است."
+
+#. module: vesta_auth_otp
+#. odoo-python
+#: code:addons/vesta_auth_otp/models/res_config_settings.py:0
+msgid "The test SMS was not sent: %(error)s"
+msgstr "پیامک آزمایشی ارسال نشد: %(error)s"
+
+#. module: vesta_auth_otp
+#. odoo-python
+#: code:addons/vesta_auth_otp/models/res_config_settings.py:0
+msgid "The test message was not sent: %(error)s"
+msgstr "پیام آزمایشی ارسال نشد: %(error)s"
+
+#. module: vesta_auth_otp
+#. odoo-python
+#: code:addons/vesta_auth_otp/models/vesta_auth_otp.py:0
+msgid "This account logs in with its email and password."
+msgstr "این حساب با ایمیل و رمز عبور وارد می‌شود."
+
+#. module: vesta_auth_otp
+#. odoo-python
+#: code:addons/vesta_auth_otp/controllers/main.py:0
+#: code:addons/vesta_auth_otp/models/vesta_auth_otp.py:0
+msgid "This code is no longer valid. Ask for a new one."
+msgstr "این کد دیگر معتبر نیست. کد تازه بخواهید."
+
+#. module: vesta_auth_otp
+#. odoo-python
+#: code:addons/vesta_auth_otp/models/vesta_auth_otp.py:0
+msgid "This number already has an account. Log in again."
+msgstr "این شماره حساب دارد. دوباره وارد شوید."
+
+#. module: vesta_auth_otp
+#. odoo-python
+#: code:addons/vesta_auth_otp/models/vesta_auth_otp.py:0
+msgid "This number belongs to another account."
+msgstr "این شماره متعلق به حساب دیگری است."
+
+#. module: vesta_auth_otp
+#. odoo-python
+#: code:addons/vesta_auth_otp/models/vesta_auth_otp.py:0
+msgid ""
+"This number belongs to several accounts. Log in with your email and "
+"password."
+msgstr "این شماره به چند حساب تعلق دارد. با ایمیل و رمز عبور وارد شوید."
+
+#. module: vesta_auth_otp
+#. odoo-python
+#: code:addons/vesta_auth_otp/models/res_config_settings.py:0
+msgid "This number has no Bale account."
+msgstr "این شماره در بله حساب ندارد."
+
+#. module: vesta_auth_otp
+#. odoo-python
+#: code:addons/vesta_auth_otp/models/vesta_auth_otp.py:0
+msgid "This number has no Bale account; the code was sent by SMS."
+msgstr "شماره در بله حساب ندارد؛ کد با پیامک ارسال شد."
+
+#. module: vesta_auth_otp
+#: model_terms:ir.ui.view,arch_db:vesta_auth_otp.otp_card
+msgid "This number has no account yet. Enter your name to finish."
+msgstr "این شماره هنوز حساب ندارد. برای پایان، نام خود را وارد کنید."
+
+#. module: vesta_auth_otp
+#: model_terms:ir.ui.view,arch_db:vesta_auth_otp.res_config_settings_view_form
+msgid ""
+"Through the SMS of Vesta Marketing (sms.ir). With the id of an approved "
+"«verify» template the code goes out with the fast send of sms.ir; without "
+"it, as a plain SMS sent at once."
+msgstr ""
+"از راه پیامک وستا مارکتینگ (sms.ir). با شناسه‌ی یک قالب تأییدشده‌ی «ارسال "
+"سریع»، کد با ارسال سریع sms.ir می‌رود؛ بدون آن، به شکل پیامک ساده و فوری."
+
+#. module: vesta_auth_otp
+#: model:ir.model.fields,field_description:vesta_auth_otp.field_vesta_auth_otp__token_expire_at
+msgid "Token Expire At"
+msgstr "انقضای توکن"
+
+#. module: vesta_auth_otp
+#: model:ir.model.fields,field_description:vesta_auth_otp.field_vesta_auth_otp__token_hash
+msgid "Token Hash"
+msgstr "درهم‌سازی توکن"
+
+#. module: vesta_auth_otp
+#. odoo-python
+#: code:addons/vesta_auth_otp/models/vesta_auth_otp.py:0
+msgid "Too many codes were asked for. Try again later."
+msgstr "کدهای زیادی درخواست شده است. کمی بعد دوباره امتحان کنید."
+
+#. module: vesta_auth_otp
+#. odoo-python
+#: code:addons/vesta_auth_otp/models/res_config_settings.py:0
+msgid "Too many requests; try again in a minute."
+msgstr "درخواست‌ها زیاد است؛ یک دقیقه‌ی دیگر دوباره امتحان کنید."
+
+#. module: vesta_auth_otp
+#. odoo-python
+#: code:addons/vesta_auth_otp/models/vesta_auth_otp.py:0
+msgid "Too many wrong codes. Ask for a new one."
+msgstr "کد نادرست زیاد وارد شد. کد تازه بخواهید."
+
+#. module: vesta_auth_otp
+#. odoo-python
+#: code:addons/vesta_auth_otp/controllers/main.py:0
+msgid "Unknown request."
+msgstr "درخواست ناشناخته."
+
+#. module: vesta_auth_otp
+#: model:ir.model.fields.selection,name:vesta_auth_otp.selection__vesta_auth_otp__state__used
+msgid "Used"
+msgstr "استفاده شد"
+
+#. module: vesta_auth_otp
+#: model:ir.model,name:vesta_auth_otp.model_res_users
+#: model:ir.model.fields,field_description:vesta_auth_otp.field_vesta_auth_otp__user_id
+msgid "User"
+msgstr "کاربر"
+
+#. module: vesta_auth_otp
+#: model:ir.model.fields,field_description:vesta_auth_otp.field_res_partner__vesta_otp_verified_mobile
+#: model:ir.model.fields,field_description:vesta_auth_otp.field_res_users__vesta_otp_verified_mobile
+msgid "Verified Mobile"
+msgstr "موبایل تأییدشده"
+
+#. module: vesta_auth_otp
+#: model:ir.module.module,shortdesc:base.module_vesta_auth_otp
+msgid "Vesta Mobile Login"
+msgstr "ورود با موبایل وستا"
+
+#. module: vesta_auth_otp
+#: model:ir.model.fields.selection,name:vesta_auth_otp.selection__vesta_auth_otp__state__pending
+msgid "Waiting for the code"
+msgstr "در انتظار کد"
+
+#. module: vesta_auth_otp
+#: model:ir.model.fields,field_description:vesta_auth_otp.field_vesta_auth_otp__website_id
+msgid "Website"
+msgstr "وب‌سایت"
+
+#. module: vesta_auth_otp
+#: model:ir.model.fields,field_description:vesta_auth_otp.field_vesta_auth_otp__attempts
+msgid "Wrong Attempts"
+msgstr "تلاش‌های نادرست"
+
+#. module: vesta_auth_otp
+#: model:ir.model.fields,field_description:vesta_auth_otp.field_res_config_settings__vesta_otp_max_attempts
+msgid "Wrong Attempts per Code"
+msgstr "تلاش نادرست برای هر کد"
+
+#. module: vesta_auth_otp
+#. odoo-python
+#: code:addons/vesta_auth_otp/models/vesta_auth_otp.py:0
+msgid "Wrong code. %(count)s attempts left."
+msgstr "کد نادرست است. %(count)s بار دیگر می‌توانید امتحان کنید."
+
+#. module: vesta_auth_otp
+#. odoo-python
+#: code:addons/vesta_auth_otp/controllers/main.py:0
+msgid "You are already logged in."
+msgstr "شما وارد شده‌اید."
+
+#. module: vesta_auth_otp
+#. odoo-python
+#: code:addons/vesta_auth_otp/models/vesta_auth_otp.py:0
+msgid "You can ask for a new code in %(seconds)s seconds."
+msgstr "%(seconds)s ثانیه‌ی دیگر می‌توانید کد تازه بخواهید."
+
+#. module: vesta_auth_otp
+#: model_terms:ir.ui.view,arch_db:vesta_auth_otp.portal_my_details
+msgid "You log in on this website with this number and a one-time code."
+msgstr "با این شماره و یک کد یک‌بارمصرف وارد این وب‌سایت می‌شوید."
+
+#. module: vesta_auth_otp
+#. odoo-python
+#: code:addons/vesta_auth_otp/models/vesta_auth_otp.py:0
+msgid "Your login code for %(website)s: %(code)s"
+msgstr "کد ورود شما به %(website)s: %(code)s"
+
+#. module: vesta_auth_otp
+#. odoo-python
+#: code:addons/vesta_auth_otp/models/vesta_auth_otp.py:0
+msgid "Your mobile number is now %(phone)s."
+msgstr "شماره‌ی موبایل شما اکنون %(phone)s است."
+
+#. module: vesta_auth_otp
+#: model:ir.model.fields,field_description:vesta_auth_otp.field_res_config_settings__vesta_otp_sms_template_id
+msgid "sms.ir Template ID"
+msgstr "شناسه‌ی قالب sms.ir"

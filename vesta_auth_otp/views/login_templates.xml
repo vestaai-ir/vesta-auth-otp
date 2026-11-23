@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright 2026 Vesta AI (https://vestaai.ir)
+     License LGPL-3.0 or later (https://www.gnu.org/licenses/lgpl). -->
+<odoo>
+
+    <!-- The two-step card: mobile number, then the code (and a name for a new account).
+         vesta_otp: {mode: login | signup | change, start: otp | password, test_mode, code_length, error} -->
+    <template id="otp_card" name="Vesta Mobile Login: card">
+        <t t-set="vo_mode" t-value="vesta_otp.get('mode') or 'login'"/>
+        <div t-attf-class="o_vesta_otp #{'o_vo_active' if vesta_otp.get('start') != 'password' else ''}"
+             t-att-data-mode="vo_mode"
+             t-att-data-code-length="vesta_otp.get('code_length') or 6">
+            <div class="o_vo_card">
+                <div t-if="vesta_otp.get('test_mode')" class="o_vo_test_badge" role="note">
+                    <i class="oi" data-icon="science" aria-hidden="true"/>
+                    <span>Test mode: nothing is sent, the code is shown here.</span>
+                </div>
+
+                <div class="o_vo_step" data-step="phone">
+                    <div class="o_vo_icon" aria-hidden="true"><i class="oi" data-icon="smartphone"/></div>
+                    <h2 class="o_vo_title" t-if="vo_mode == 'login'">Log in or sign up</h2>
+                    <h2 class="o_vo_title" t-elif="vo_mode == 'signup'">Sign up with your mobile</h2>
+                    <h2 class="o_vo_title" t-else="">Change your mobile number</h2>
+                    <p class="o_vo_lead" t-if="vo_mode == 'change'">Enter the new number; we send it a code to make sure it is yours.</p>
+                    <p class="o_vo_lead" t-else="">Enter your mobile number; we send you a one-time code.</p>
+                    <form class="o_vo_phone_form" novalidate="novalidate">
+                        <label for="o_vo_phone" class="form-label">Mobile number</label>
+                        <input id="o_vo_phone" type="tel" name="vo_phone" class="form-control o_vo_input"
+                               dir="ltr" inputmode="numeric" autocomplete="tel" maxlength="20" required="required"
+                               t-att-placeholder="'۰۹۱۲ ۳۴۵ ۶۷۸۹' if (request.env.lang or '').startswith('fa') else '0912 345 6789'"/>
+                        <button type="submit" class="btn btn-primary o_vo_submit">
+                            <span>Get the code</span>
+                        </button>
+                    </form>
+                </div>
+
+                <div class="o_vo_step d-none" data-step="code">
+                    <div class="o_vo_icon" aria-hidden="true"><i class="oi" data-icon="dialpad"/></div>
+                    <h2 class="o_vo_title">Enter the code</h2>
+                    <p class="o_vo_lead">
+                        <span>The code was sent to</span>
+                        <b class="o_vo_phone_display" dir="ltr"/>
+                        <button type="button" class="btn btn-link o_vo_edit">
+                            <i class="oi" data-icon="edit" aria-hidden="true"/> Edit number
+                        </button>
+                    </p>
+                    <p class="o_vo_sent" role="status"/>
+                    <p class="o_vo_hint d-none" role="status"/>
+                    <form class="o_vo_code_form" novalidate="novalidate">
+                        <label for="o_vo_code" class="form-label visually-hidden">One-time code</label>
+                        <input id="o_vo_code" type="text" name="vo_code" class="form-control o_vo_code"
+                               dir="ltr" inputmode="numeric" autocomplete="one-time-code" required="required"
+                               t-att-maxlength="vesta_otp.get('code_length') or 6"
+                               t-att-placeholder="'•' * (vesta_otp.get('code_length') or 6)"
+                               aria-label="One-time code"/>
+                        <button type="submit" class="btn btn-primary o_vo_submit">
+                            <span t-if="vo_mode == 'change'">Confirm the number</span>
+                            <span t-else="">Confirm and log in</span>
+                        </button>
+                    </form>
+                    <div class="o_vo_resend_row">
+                        <span class="o_vo_wait">Send again in <span class="o_vo_timer" dir="ltr">0:59</span></span>
+                        <button type="button" class="btn btn-link o_vo_resend d-none">
+                            <i class="oi" data-icon="refresh" aria-hidden="true"/> Send the code again
+                        </button>
+                    </div>
+                </div>
+
+                <div class="o_vo_step d-none" data-step="name">
+                    <div class="o_vo_icon" aria-hidden="true"><i class="oi" data-icon="person_add"/></div>
+                    <h2 class="o_vo_title">Create your account</h2>
+                    <p class="o_vo_lead">This number has no account yet. Enter your name to finish.</p>
+                    <form class="o_vo_name_form" novalidate="novalidate">
+                        <label for="o_vo_name" class="form-label">Full name</label>
+                        <input id="o_vo_name" type="text" name="vo_name" class="form-control o_vo_input"
+                               autocomplete="name" maxlength="128" required="required" placeholder="Full name"/>
+                        <button type="submit" class="btn btn-primary o_vo_submit">
+                            <span>Create the account and log in</span>
+                        </button>
+                    </form>
+                </div>
+
+                <div t-attf-class="o_vo_error alert alert-danger #{'' if vesta_otp.get('error') else 'd-none'}" role="alert"
+                     t-out="vesta_otp.get('error') or ''"/>
+                <div class="o_vo_success alert alert-success d-none" role="status"/>
+
+                <div class="o_vo_footer" t-if="vo_mode == 'login'">
+                    <button type="button" class="btn btn-link o_vo_switch" data-vo-switch="password">
+                        <i class="oi" data-icon="mail" aria-hidden="true"/> Log in with email and password
+                    </button>
+                </div>
+                <div class="o_vo_footer" t-elif="vo_mode == 'signup'">
+                    <button type="button" class="btn btn-link o_vo_switch" data-vo-switch="password">
+                        <i class="oi" data-icon="mail" aria-hidden="true"/> Sign up with email
+                    </button>
+                    <a t-attf-href="/web/login?{{ keep_query('redirect') }}" class="btn btn-link">Already have an account?</a>
+                </div>
+            </div>
+            <form t-if="vo_mode != 'change'" class="o_vo_login_form d-none" method="post" action="/web/login">
+                <input type="hidden" name="csrf_token" t-att-value="request.csrf_token()"/>
+                <input type="hidden" name="type" value="vesta_otp"/>
+                <input type="hidden" name="otp_token" value=""/>
+                <input type="hidden" name="password" value=""/>
+                <input type="hidden" name="redirect" t-att-value="redirect or ''"/>
+            </form>
+        </div>
+    </template>
+
+    <template id="login" inherit_id="web.login" name="Vesta Mobile Login: login page" priority="40">
+        <xpath expr="//owl-component[@name='web.user_switch']" position="before">
+            <t t-if="vesta_otp" t-call="vesta_auth_otp.otp_card"/>
+        </xpath>
+        <xpath expr="//div[hasclass('oe_login_buttons')]" position="inside">
+            <button t-if="vesta_otp" type="button" class="btn btn-link btn-sm o_vo_switch" data-vo-switch="otp">
+                <i class="oi" data-icon="smartphone" aria-hidden="true"/> Log in with mobile number
+            </button>
+        </xpath>
+    </template>
+
+    <template id="signup" inherit_id="auth_signup.signup" name="Vesta Mobile Login: sign-up page" priority="40">
+        <xpath expr="//form[hasclass('oe_signup_form')]" position="before">
+            <t t-if="vesta_otp" t-call="vesta_auth_otp.otp_card"/>
+        </xpath>
+        <xpath expr="//form[hasclass('oe_signup_form')]//div[hasclass('oe_login_buttons')]" position="inside">
+            <button t-if="vesta_otp" type="button" class="btn btn-link btn-sm o_vo_switch" data-vo-switch="otp">
+                <i class="oi" data-icon="smartphone" aria-hidden="true"/> Sign up with mobile number
+            </button>
+        </xpath>
+    </template>
+
+</odoo>

@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright 2026 Vesta AI (https://vestaai.ir)
+     License LGPL-3.0 or later (https://www.gnu.org/licenses/lgpl). -->
+<odoo>
+    <record id="res_config_settings_view_form" model="ir.ui.view">
+        <field name="name">res.config.settings.view.form.inherit.vesta.auth.otp</field>
+        <field name="model">res.config.settings</field>
+        <field name="inherit_id" ref="website.res_config_settings_view_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//block[@id='website_info_settings']" position="after">
+                <block title="Login with Mobile" id="vesta_auth_otp_settings" groups="base.group_system">
+                    <setting id="vesta_otp_enabled_setting"
+                             help="Customers log in and sign up with their mobile number and a one-time code sent by SMS and Bale at the same time. The password login stays available.">
+                        <field name="vesta_otp_enabled"/>
+                        <div class="content-group" invisible="not vesta_otp_enabled">
+                            <div class="row mt16">
+                                <label for="vesta_otp_allow_internal" class="col-lg-6 o_light_label"/>
+                                <field name="vesta_otp_allow_internal"/>
+                            </div>
+                        </div>
+                    </setting>
+                    <setting id="vesta_otp_test_mode_setting"
+                             help="Nothing is sent: the code is shown on the login page and written in the server log. Turn it off once sms.ir or Bale is set up; never leave it on for real customers.">
+                        <field name="vesta_otp_test_mode"/>
+                        <div class="mt8 text-warning" invisible="not vesta_otp_test_mode or not vesta_otp_enabled">
+                            <i class="oi" data-icon="warning" aria-hidden="true"/>
+                            In test mode anyone can log in with any number: use it only to try the module.
+                        </div>
+                    </setting>
+                    <setting id="vesta_otp_code_setting" string="Codes"
+                             help="Length and lifetime of the codes, and when a new code may be asked for.">
+                        <div class="content-group">
+                            <div class="row mt16">
+                                <label for="vesta_otp_code_length" class="col-lg-6 o_light_label"/>
+                                <field name="vesta_otp_code_length" class="col-lg-3"/>
+                            </div>
+                            <div class="row">
+                                <label for="vesta_otp_expiry" class="col-lg-6 o_light_label"/>
+                                <field name="vesta_otp_expiry" class="col-lg-3"/>
+                            </div>
+                            <div class="row">
+                                <label for="vesta_otp_resend_delay" class="col-lg-6 o_light_label"/>
+                                <field name="vesta_otp_resend_delay" class="col-lg-3"/>
+                            </div>
+                        </div>
+                    </setting>
+                    <setting id="vesta_otp_limits_setting" string="Limits"
+                             help="A code dies after too many wrong attempts; numbers and addresses that ask for too many codes wait.">
+                        <div class="content-group">
+                            <div class="row mt16">
+                                <label for="vesta_otp_max_attempts" class="col-lg-6 o_light_label"/>
+                                <field name="vesta_otp_max_attempts" class="col-lg-3"/>
+                            </div>
+                            <div class="row">
+                                <label for="vesta_otp_phone_limit" class="col-lg-6 o_light_label"/>
+                                <field name="vesta_otp_phone_limit" class="col-lg-3"/>
+                            </div>
+                            <div class="row">
+                                <label for="vesta_otp_ip_limit" class="col-lg-6 o_light_label"/>
+                                <field name="vesta_otp_ip_limit" class="col-lg-3"/>
+                            </div>
+                        </div>
+                    </setting>
+                    <setting id="vesta_otp_sms_setting"
+                             help="Through the SMS of Vesta Marketing (sms.ir). With the id of an approved «verify» template the code goes out with the fast send of sms.ir; without it, as a plain SMS sent at once.">
+                        <field name="vesta_otp_sms_enabled"/>
+                        <div class="content-group" invisible="not vesta_otp_sms_enabled">
+                            <div class="row mt16">
+                                <label for="vesta_otp_sms_template_id" class="col-lg-6 o_light_label"/>
+                                <field name="vesta_otp_sms_template_id" class="col-lg-6" placeholder="123456"/>
+                            </div>
+                            <div class="row" invisible="not vesta_otp_sms_template_id">
+                                <label for="vesta_otp_sms_template_param" class="col-lg-6 o_light_label"/>
+                                <field name="vesta_otp_sms_template_param" class="col-lg-6" placeholder="Code"/>
+                            </div>
+                            <div class="mt8">
+                                <button name="action_vesta_otp_sms_test" type="object" icon="east" class="btn-link"
+                                        string="Send a test SMS"/>
+                            </div>
+                        </div>
+                    </setting>
+                    <setting id="vesta_otp_bale_setting"
+                             help="Safir, the code service of Bale: Bale sends the code from its own verification bot to the Bale account of the number.">
+                        <field name="vesta_otp_bale_enabled"/>
+                        <div class="content-group" invisible="not vesta_otp_bale_enabled">
+                            <div class="row mt16">
+                                <label for="vesta_otp_bale_api_key" class="col-lg-6 o_light_label"/>
+                                <field name="vesta_otp_bale_api_key" password="True" class="col-lg-6" placeholder="••••••••••••"/>
+                            </div>
+                            <div class="row">
+                                <label for="vesta_otp_bale_bot_id" class="col-lg-6 o_light_label"/>
+                                <field name="vesta_otp_bale_bot_id" class="col-lg-6" placeholder="123456789"/>
+                            </div>
+                            <div class="mt8">
+                                <button name="action_vesta_otp_bale_test" type="object" icon="east" class="btn-link"
+                                        string="Send a test message on Bale"/>
+                            </div>
+                            <div class="mt4">
+                                <a href="https://business.bale.ai" target="_blank">Get the key and the bot ID in Bale Business</a>
+                            </div>
+                        </div>
+                    </setting>
+                    <setting id="vesta_otp_test_mobile_setting" string="Test Mobile"
+                             help="The number that receives the test SMS and the test Bale message.">
+                        <field name="vesta_otp_test_mobile" placeholder="09121234567"/>
+                        <div class="mt8">
+                            <button name="%(vesta_auth_otp.action_vesta_auth_otp)d" type="action" icon="east"
+                                    class="btn-link" string="Login codes"/>
+                        </div>
+                    </setting>
+                </block>
+            </xpath>
+        </field>
+    </record>
+</odoo>

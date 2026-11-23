@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright 2026 Vesta AI (https://vestaai.ir)
+     License LGPL-3.0 or later (https://www.gnu.org/licenses/lgpl). -->
+<odoo>
+
+    <!-- /my/account: the verified mobile, changed only with a code sent to the new number -->
+    <template id="portal_my_details" inherit_id="portal.portal_my_details" name="Vesta Mobile Login: verified mobile">
+        <xpath expr="//div[@id='errors']" position="before">
+            <t t-set="vo_settings" t-value="request.env['vesta.auth.otp'].sudo()._otp_settings()"/>
+            <t t-if="vo_settings['enabled']">
+                <t t-set="vo_partner" t-value="request.env.user.partner_id"/>
+                <t t-set="vo_verified" t-value="vo_partner._vesta_otp_mobile_display()"/>
+                <div class="o_vo_account card mb-4">
+                    <div class="card-body">
+                        <div class="o_vo_account_row">
+                            <div class="o_vo_account_icon" aria-hidden="true"><i class="oi" data-icon="smartphone"/></div>
+                            <div class="o_vo_account_text">
+                                <div class="o_vo_account_label">Login mobile</div>
+                                <div t-if="vo_verified" class="o_vo_account_number">
+                                    <span class="o_vo_account_value" dir="ltr" t-out="vo_verified"/>
+                                    <span class="badge o_vo_badge_ok">
+                                        <i class="oi" data-icon="verified" aria-hidden="true"/> Verified
+                                    </span>
+                                </div>
+                                <div t-else="" class="o_vo_account_number text-muted">
+                                    <span class="o_vo_account_value">No verified mobile yet</span>
+                                </div>
+                                <div class="o_vo_account_help">You log in on this website with this number and a one-time code.</div>
+                            </div>
+                            <button type="button" class="btn btn-outline-primary btn-sm o_vo_account_toggle"
+                                    data-bs-toggle="collapse" data-bs-target="#o_vo_change" aria-expanded="false"
+                                    aria-controls="o_vo_change">
+                                <span t-if="vo_verified">Change</span>
+                                <span t-else="">Add a mobile</span>
+                            </button>
+                        </div>
+                        <div id="o_vo_change" class="collapse">
+                            <t t-set="vesta_otp" t-value="{'mode': 'change', 'start': 'otp', 'test_mode': vo_settings['test_mode'], 'code_length': vo_settings['code_length']}"/>
+                            <t t-call="vesta_auth_otp.otp_card"/>
+                        </div>
+                    </div>
+                </div>
+            </t>
+        </xpath>
+    </template>
+
+</odoo>

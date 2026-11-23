@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright 2026 Vesta AI (https://vestaai.ir)
+     License LGPL-3.0 or later (https://www.gnu.org/licenses/lgpl). -->
+<odoo>
+    <record id="vesta_auth_otp_view_list" model="ir.ui.view">
+        <field name="name">vesta.auth.otp.list</field>
+        <field name="model">vesta.auth.otp</field>
+        <field name="arch" type="xml">
+            <list create="false" edit="false" delete="false">
+                <field name="create_date" string="Date"/>
+                <field name="phone"/>
+                <field name="purpose"/>
+                <field name="user_id"/>
+                <field name="ip"/>
+                <field name="sms_state" widget="badge" decoration-success="sms_state == 'sent'" decoration-danger="sms_state == 'failed'" decoration-info="sms_state == 'test'"/>
+                <field name="sms_info" optional="hide"/>
+                <field name="bale_state" widget="badge" decoration-success="bale_state == 'sent'" decoration-danger="bale_state == 'failed'" decoration-info="bale_state == 'test'"/>
+                <field name="bale_info" optional="hide"/>
+                <field name="attempts"/>
+                <field name="state" widget="badge" decoration-success="state == 'used'" decoration-warning="state in ('pending', 'verified')" decoration-muted="state == 'dead'"/>
+                <field name="website_id" groups="website.group_multi_website" optional="hide"/>
+            </list>
+        </field>
+    </record>
+
+    <record id="vesta_auth_otp_view_search" model="ir.ui.view">
+        <field name="name">vesta.auth.otp.search</field>
+        <field name="model">vesta.auth.otp</field>
+        <field name="arch" type="xml">
+            <search>
+                <field name="phone"/>
+                <field name="user_id"/>
+                <field name="ip"/>
+                <filter name="sms_failed" string="SMS Failed" domain="[('sms_state', '=', 'failed')]"/>
+                <filter name="bale_failed" string="Bale Failed" domain="[('bale_state', '=', 'failed')]"/>
+                <separator/>
+                <filter name="used" string="Logged In" domain="[('state', '=', 'used')]"/>
+            </search>
+        </field>
+    </record>
+
+    <record id="action_vesta_auth_otp" model="ir.actions.act_window">
+        <field name="name">Login Codes</field>
+        <field name="res_model">vesta.auth.otp</field>
+        <field name="view_mode">list</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">No login code was asked for yet</p>
+            <p>Every code asked for on the website is listed here for a day, with how it was sent. The codes themselves are never stored.</p>
+        </field>
+    </record>
+
+    <menuitem id="menu_vesta_auth_otp" name="Login Codes" parent="website.menu_website_global_configuration"
+              action="action_vesta_auth_otp" groups="base.group_system" sequence="90"/>
+</odoo>

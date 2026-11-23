@@ -1,0 +1,71 @@
+<section class="container" style="max-width: 1100px;">
+    <div class="text-center my-4">
+        <img src="banner.png" alt="Vesta Mobile Login" class="img-fluid" style="border-radius: 16px; box-shadow: 0 12px 40px rgba(0,0,0,.25);"/>
+    </div>
+
+    <div dir="rtl" class="my-5">
+        <h2 style="font-weight: 800;">ورود با موبایل وستا؛ ورود و ثبت‌نام در فروشگاه اودو ۲۰ با کد یک‌بارمصرف</h2>
+        <p class="lead">مشتری‌ها با شماره‌ی موبایل و یک کد یک‌بارمصرف وارد وب‌سایت می‌شوند یا ثبت‌نام می‌کنند. کد هم‌زمان با پیامک (از راه وستا مارکتینگ و sms.ir) و در بله (سرویس سفیر) ارسال می‌شود؛ نشست با ورود خود اودو باز می‌شود و ورود دومرحله‌ای همچنان اعمال می‌شود. رایگان و متن‌باز.</p>
+
+        <div class="row g-4 my-4">
+            <div class="col-md-4">
+                <h4>📱 ساده برای مشتری</h4>
+                <ul>
+                    <li>شماره، سپس کد؛ شمارش معکوس ارسال دوباره و ویرایش شماره</li>
+                    <li>شماره‌ی تازه فقط نام می‌خواهد و حساب پرتال ساخته می‌شود</li>
+                    <li>پر شدن خودکار کد در گوشی (WebOTP و one-time-code)</li>
+                    <li>بازگشت به تسویه‌حساب پس از ورود</li>
+                </ul>
+            </div>
+            <div class="col-md-4">
+                <h4>📨 پیامک و بله با هم</h4>
+                <ul>
+                    <li>ارسال سریع sms.ir با شناسه‌ی قالب، یا پیامک فوری</li>
+                    <li>سفیر بله؛ اگر شماره در بله حساب نداشت، پیامک کافی است</li>
+                    <li>صفحه می‌گوید کد به کجا رفت</li>
+                    <li>فهرست کدها و وضعیت ارسال برای مدیر</li>
+                </ul>
+            </div>
+            <div class="col-md-4">
+                <h4>🛡️ امن</h4>
+                <ul>
+                    <li>فقط HMAC کد ذخیره می‌شود؛ ۱۲۰ ثانیه اعتبار</li>
+                    <li>باطل پس از ۵ تلاش نادرست؛ محدودیت شماره و IP</li>
+                    <li>پاسخ‌ها وجود حساب را لو نمی‌دهند</li>
+                    <li>تغییر شماره فقط با کد شماره‌ی تازه</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="my-5">
+        <img src="screenshots/login_desktop_step2.jpg" alt="Code step" class="img-fluid border rounded-3 shadow-sm"/>
+    </div>
+    <div class="row g-4 my-4">
+        <div class="col-md-6"><img src="screenshots/login_phone_step1.jpg" alt="Phone" class="img-fluid border rounded-3 shadow-sm"/></div>
+        <div class="col-md-6"><img src="screenshots/login_phone_dark_step2.jpg" alt="Phone, dark" class="img-fluid border rounded-3 shadow-sm"/></div>
+    </div>
+    <div class="my-5">
+        <img src="screenshots/checkout_signup_name.jpg" alt="Sign-up from the checkout" class="img-fluid border rounded-3 shadow-sm"/>
+    </div>
+    <div class="my-5">
+        <img src="screenshots/settings.jpg" alt="Settings" class="img-fluid border rounded-3 shadow-sm"/>
+    </div>
+
+    <div class="my-5">
+        <h3>Vesta Mobile Login: log in and sign up on Odoo 20 with a one-time code</h3>
+        <p>Customers log in and sign up on the website with their mobile number and a one-time code, sent at the same
+            time by SMS (through Vesta Marketing and sms.ir) and on Bale (Safir). The session is opened by Odoo's own
+            login, so two-factor authentication still applies and the checkout comes back after the login.</p>
+        <ul>
+            <li>Codes of 4 to 6 digits, stored only as an HMAC, valid 120 seconds, dead after 5 wrong attempts; limits per
+                number and per IP address; answers that never tell whether an account exists.</li>
+            <li>sms.ir fast «verify» template or an immediate SMS with the WebOTP line; Bale's Safir service in parallel.</li>
+            <li>Verified mobile on /my/account, changed only with a code sent to the new number.</li>
+            <li>Test mode (on by default): nothing is sent, the code is shown on the page.</li>
+            <li>RTL first, Persian digits, phone width, the dark theme of Vesta Shop; no external resources.</li>
+        </ul>
+        <p class="mt-4">Free and open source (LGPL-3), by <a href="https://vestaai.ir">Vesta AI</a> ·
+            <a href="https://vestaai.ir/odoo/modules/vesta-auth-otp">vestaai.ir/odoo/modules/vesta-auth-otp</a></p>
+    </div>
+</section>
