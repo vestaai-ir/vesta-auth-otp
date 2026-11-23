@@ -75,4 +75,3 @@ Credits
 =======
 
 - `Vesta AI <https://vestaai.ir>`_
-
