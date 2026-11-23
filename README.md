@@ -19,6 +19,8 @@
 
 ## ورود با موبایل وستا؛ ورود و ثبت‌نام در فروشگاه اودو ۲۰ با کد یک‌بارمصرف
 
+**اعلانات اودو با بله · بومی‌سازی اودو برای پیام‌رسان بله**
+
 **ورود با موبایل وستا** به مشتری‌ها اجازه می‌دهد با شماره‌ی موبایل و یک کد یک‌بارمصرف وارد وب‌سایت شوند یا ثبت‌نام کنند. کد **هم‌زمان** با پیامک (از راه **وستا مارکتینگ** و sms.ir) و در **بله** (سرویس سفیر) ارسال می‌شود و صفحه می‌گوید کد به کجا رفت.
 
 - 📱 **کارت دومرحله‌ای**: شماره‌ی موبایل، سپس کد، با شمارش معکوس «ارسال دوباره تا ۰:۵۹» و «ویرایش شماره». ورود با ایمیل و رمز عبور یک کلیک فاصله دارد.
@@ -50,6 +52,8 @@ odoo -c /etc/odoo/odoo.conf -d YOUR_DB -i vesta_auth_otp --stop-after-init
 <div id="en">
 
 ## Vesta Mobile Login: log in and sign up on Odoo 20 with a one-time code
+
+**Odoo notifications with Bale · Odoo localization for the Bale messenger**
 
 **Vesta Mobile Login** lets customers log in and sign up on the website with their mobile number and a one-time code. The code goes out **at the same time** by SMS (through **Vesta Marketing** and sms.ir) and on **Bale** (its Safir code service); the page says where it went.
 
