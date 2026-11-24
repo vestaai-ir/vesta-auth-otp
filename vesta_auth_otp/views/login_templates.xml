@@ -24,7 +24,7 @@
                     <p class="o_vo_lead" t-if="vo_mode == 'change'">Enter the new number; we send it a code to make sure it is yours.</p>
                     <p class="o_vo_lead" t-else="">Enter your mobile number; we send you a one-time code.</p>
                     <form class="o_vo_phone_form" novalidate="novalidate">
-                        <label for="o_vo_phone" class="form-label">Mobile number</label>
+                        <label for="o_vo_phone" class="o_vo_label">Mobile number</label>
                         <input id="o_vo_phone" type="tel" name="vo_phone" class="form-control o_vo_input"
                                dir="ltr" inputmode="numeric" autocomplete="tel" maxlength="20" required="required"
                                t-att-placeholder="'۰۹۱۲ ۳۴۵ ۶۷۸۹' if (request.env.lang or '').startswith('fa') else '0912 345 6789'"/>
@@ -47,7 +47,7 @@
                     <p class="o_vo_sent" role="status"/>
                     <p class="o_vo_hint d-none" role="status"/>
                     <form class="o_vo_code_form" novalidate="novalidate">
-                        <label for="o_vo_code" class="form-label visually-hidden">One-time code</label>
+                        <label for="o_vo_code" class="o_vo_label visually-hidden">One-time code</label>
                         <input id="o_vo_code" type="text" name="vo_code" class="form-control o_vo_code"
                                dir="ltr" inputmode="numeric" autocomplete="one-time-code" required="required"
                                t-att-maxlength="vesta_otp.get('code_length') or 6"
@@ -71,7 +71,7 @@
                     <h2 class="o_vo_title">Create your account</h2>
                     <p class="o_vo_lead">This number has no account yet. Enter your name to finish.</p>
                     <form class="o_vo_name_form" novalidate="novalidate">
-                        <label for="o_vo_name" class="form-label">Full name</label>
+                        <label for="o_vo_name" class="o_vo_label">Full name</label>
                         <input id="o_vo_name" type="text" name="vo_name" class="form-control o_vo_input"
                                autocomplete="name" maxlength="128" required="required" placeholder="Full name"/>
                         <button type="submit" class="btn btn-primary o_vo_submit">
@@ -104,6 +104,23 @@
                 <input type="hidden" name="redirect" t-att-value="redirect or ''"/>
             </form>
         </div>
+    </template>
+
+    <!-- The login, sign-up and password reset pages: the logo and the card only, nothing else of the website
+         (Odoo's «Choose a user» link goes to the first `label.form-label`: the labels of the card have their own
+         class so that it stays in the email form) -->
+    <template id="login_layout" inherit_id="website.login_layout" name="Vesta Mobile Login: focused pages" priority="40">
+        <xpath expr="//t[@t-call='website.layout']" position="before">
+            <t t-set="no_header" t-value="True"/>
+            <t t-set="no_footer" t-value="True"/>
+        </xpath>
+        <xpath expr="//div[hasclass('oe_website_login_container')]" position="before">
+            <div class="o_vo_focus">
+                <a t-if="website" href="/" class="o_vo_brand" t-att-title="website.name">
+                    <img t-att-src="'/web/image/website/%s/logo' % website.id" t-att-alt="website.name"/>
+                </a>
+            </div>
+        </xpath>
     </template>
 
     <template id="login" inherit_id="web.login" name="Vesta Mobile Login: login page" priority="40">

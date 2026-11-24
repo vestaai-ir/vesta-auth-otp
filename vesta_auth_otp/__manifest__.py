@@ -4,7 +4,7 @@
     "name": "Vesta Mobile Login",
     "summary": "Customers log in and sign up on the website with their mobile number and a one-time code,"
     " sent by SMS (sms.ir) and Bale at the same time",
-    "version": "20.0.1.0.0",
+    "version": "20.0.1.1.0",
     "category": "Website/Website",
     "website": "https://vestaai.ir/odoo/modules/vesta-auth-otp",
     "author": "Vesta AI",
