@@ -28,13 +28,15 @@ msgstr ""
 #. module: vesta_auth_otp
 #: model_terms:ir.ui.view,arch_db:vesta_auth_otp.otp_card
 msgid ""
-"<i class=\"oi\" data-icon=\"mail\" aria-hidden=\"true\"/> Log in with email "
-"and password"
+"<i class=\"oi\" data-icon=\"mail\" aria-hidden=\"true\"/> <span>Log in with "
+"email</span>"
 msgstr ""
 
 #. module: vesta_auth_otp
 #: model_terms:ir.ui.view,arch_db:vesta_auth_otp.otp_card
-msgid "<i class=\"oi\" data-icon=\"mail\" aria-hidden=\"true\"/> Sign up with email"
+msgid ""
+"<i class=\"oi\" data-icon=\"mail\" aria-hidden=\"true\"/> <span>Sign up with"
+" email</span>"
 msgstr ""
 
 #. module: vesta_auth_otp
@@ -47,20 +49,6 @@ msgstr ""
 msgid ""
 "<i class=\"oi\" data-icon=\"science\" aria-hidden=\"true\"/>\n"
 "                    <span>Test mode: nothing is sent, the code is shown here.</span>"
-msgstr ""
-
-#. module: vesta_auth_otp
-#: model_terms:ir.ui.view,arch_db:vesta_auth_otp.login
-msgid ""
-"<i class=\"oi\" data-icon=\"smartphone\" aria-hidden=\"true\"/> Log in with "
-"mobile number"
-msgstr ""
-
-#. module: vesta_auth_otp
-#: model_terms:ir.ui.view,arch_db:vesta_auth_otp.signup
-msgid ""
-"<i class=\"oi\" data-icon=\"smartphone\" aria-hidden=\"true\"/> Sign up with"
-" mobile number"
 msgstr ""
 
 #. module: vesta_auth_otp
@@ -105,6 +93,12 @@ msgstr ""
 msgid ""
 "<span>The code was sent to</span>\n"
 "                        <b class=\"o_vo_phone_display\" dir=\"ltr\"/>"
+msgstr ""
+
+#. module: vesta_auth_otp
+#: model_terms:ir.ui.view,arch_db:vesta_auth_otp.login_oauth
+#: model_terms:ir.ui.view,arch_db:vesta_auth_otp.otp_card
+msgid "<span>or</span>"
 msgstr ""
 
 #. module: vesta_auth_otp
@@ -194,6 +188,11 @@ msgstr ""
 #. module: vesta_auth_otp
 #: model_terms:ir.ui.view,arch_db:vesta_auth_otp.otp_card
 msgid "Change your mobile number"
+msgstr ""
+
+#. module: vesta_auth_otp
+#: model_terms:ir.ui.view,arch_db:vesta_auth_otp.reset_password
+msgid "Choose a new password."
 msgstr ""
 
 #. module: vesta_auth_otp
@@ -351,6 +350,16 @@ msgid "Enter the test mobile (an Iranian mobile number) first."
 msgstr ""
 
 #. module: vesta_auth_otp
+#: model_terms:ir.ui.view,arch_db:vesta_auth_otp.login
+msgid "Enter your email and password."
+msgstr ""
+
+#. module: vesta_auth_otp
+#: model_terms:ir.ui.view,arch_db:vesta_auth_otp.reset_password
+msgid "Enter your email; we send you a link to choose a new password."
+msgstr ""
+
+#. module: vesta_auth_otp
 #. odoo-python
 #: code:addons/vesta_auth_otp/models/vesta_auth_otp.py:0
 msgid "Enter your full name."
@@ -449,6 +458,16 @@ msgid "Log in or sign up"
 msgstr ""
 
 #. module: vesta_auth_otp
+#: model_terms:ir.ui.view,arch_db:vesta_auth_otp.login
+msgid "Log in with email"
+msgstr ""
+
+#. module: vesta_auth_otp
+#: model_terms:ir.ui.view,arch_db:vesta_auth_otp.login_oauth
+msgid "Log in with mobile number"
+msgstr ""
+
+#. module: vesta_auth_otp
 #: model_terms:ir.ui.view,arch_db:vesta_auth_otp.vesta_auth_otp_view_search
 msgid "Logged In"
 msgstr ""
@@ -519,6 +538,11 @@ msgid "No account was found with this mobile number."
 msgstr ""
 
 #. module: vesta_auth_otp
+#: model_terms:ir.ui.view,arch_db:vesta_auth_otp.otp_card
+msgid "No account yet? Your mobile number creates one."
+msgstr ""
+
+#. module: vesta_auth_otp
 #: model_terms:ir.actions.act_window,help:vesta_auth_otp.action_vesta_auth_otp
 msgid "No login code was asked for yet"
 msgstr ""
@@ -581,6 +605,11 @@ msgstr ""
 #. module: vesta_auth_otp
 #: model:ir.model.fields,field_description:vesta_auth_otp.field_res_config_settings__vesta_otp_resend_delay
 msgid "Resend After (seconds)"
+msgstr ""
+
+#. module: vesta_auth_otp
+#: model_terms:ir.ui.view,arch_db:vesta_auth_otp.reset_password
+msgid "Reset your password"
 msgstr ""
 
 #. module: vesta_auth_otp
@@ -652,6 +681,16 @@ msgstr ""
 #. module: vesta_auth_otp
 #: model:ir.model.fields,field_description:vesta_auth_otp.field_vesta_auth_otp__session_hash
 msgid "Session Hash"
+msgstr ""
+
+#. module: vesta_auth_otp
+#: model_terms:ir.ui.view,arch_db:vesta_auth_otp.signup
+msgid "Sign up with email"
+msgstr ""
+
+#. module: vesta_auth_otp
+#: model_terms:ir.ui.view,arch_db:vesta_auth_otp.login_oauth
+msgid "Sign up with mobile number"
 msgstr ""
 
 #. module: vesta_auth_otp

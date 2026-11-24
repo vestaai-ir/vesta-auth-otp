@@ -85,15 +85,20 @@
                 <div class="o_vo_success alert alert-success d-none" role="status"/>
 
                 <div class="o_vo_footer" t-if="vo_mode == 'login'">
-                    <button type="button" class="btn btn-link o_vo_switch" data-vo-switch="password">
-                        <i class="oi" data-icon="mail" aria-hidden="true"/> Log in with email and password
+                    <div class="o_vo_or"><span>or</span></div>
+                    <button type="button" class="btn o_vo_alt o_vo_switch" data-vo-switch="password">
+                        <i class="oi" data-icon="mail" aria-hidden="true"/> <span>Log in with email</span>
                     </button>
+                    <p class="o_vo_note">No account yet? Your mobile number creates one.</p>
                 </div>
                 <div class="o_vo_footer" t-elif="vo_mode == 'signup'">
-                    <button type="button" class="btn btn-link o_vo_switch" data-vo-switch="password">
-                        <i class="oi" data-icon="mail" aria-hidden="true"/> Sign up with email
+                    <div class="o_vo_or"><span>or</span></div>
+                    <button type="button" class="btn o_vo_alt o_vo_switch" data-vo-switch="password">
+                        <i class="oi" data-icon="mail" aria-hidden="true"/> <span>Sign up with email</span>
                     </button>
-                    <a t-attf-href="/web/login?{{ keep_query('redirect') }}" class="btn btn-link">Already have an account?</a>
+                    <p class="o_vo_note">
+                        <a t-attf-href="/web/login?{{ keep_query('redirect') }}">Already have an account?</a>
+                    </p>
                 </div>
             </div>
             <form t-if="vo_mode != 'change'" class="o_vo_login_form d-none" method="post" action="/web/login">
@@ -106,19 +111,20 @@
         </div>
     </template>
 
-    <!-- The login, sign-up and password reset pages: the logo and the card only, nothing else of the website
-         (Odoo's «Choose a user» link goes to the first `label.form-label`: the labels of the card have their own
-         class so that it stays in the email form) -->
+    <!-- The login, sign-up and password reset pages: one card in the middle of the screen with the mark of the
+         website, nothing else of the website (Odoo's «Choose a user» link goes to the first `label.form-label`: the
+         labels of the mobile card have their own class so that it stays in the email form) -->
     <template id="login_layout" inherit_id="website.login_layout" name="Vesta Mobile Login: focused pages" priority="40">
         <xpath expr="//t[@t-call='website.layout']" position="before">
             <t t-set="no_header" t-value="True"/>
             <t t-set="no_footer" t-value="True"/>
         </xpath>
-        <xpath expr="//div[hasclass('oe_website_login_container')]" position="before">
-            <div class="o_vo_focus">
-                <a t-if="website" href="/" class="o_vo_brand" t-att-title="website.name">
-                    <img t-att-src="'/web/image/website/%s/logo' % website.id" t-att-alt="website.name"/>
+        <xpath expr="//div[hasclass('oe_website_login_container')]" position="replace">
+            <div class="o_vo_focus_card">
+                <a t-if="website" href="/" class="o_vo_mark" t-att-title="website.name">
+                    <img t-att-src="'/web/image/website/%s/favicon' % website.id" t-att-alt="website.name"/>
                 </a>
+                <t>$0</t>
             </div>
         </xpath>
     </template>
@@ -127,10 +133,11 @@
         <xpath expr="//owl-component[@name='web.user_switch']" position="before">
             <t t-if="vesta_otp" t-call="vesta_auth_otp.otp_card"/>
         </xpath>
-        <xpath expr="//div[hasclass('oe_login_buttons')]" position="inside">
-            <button t-if="vesta_otp" type="button" class="btn btn-link btn-sm o_vo_switch" data-vo-switch="otp">
-                <i class="oi" data-icon="smartphone" aria-hidden="true"/> Log in with mobile number
-            </button>
+        <xpath expr="//div[hasclass('field-login')]" position="before">
+            <div t-if="vesta_otp" class="o_vo_form_head">
+                <h2 class="o_vo_title">Log in with email</h2>
+                <p class="o_vo_lead">Enter your email and password.</p>
+            </div>
         </xpath>
     </template>
 
@@ -138,10 +145,35 @@
         <xpath expr="//form[hasclass('oe_signup_form')]" position="before">
             <t t-if="vesta_otp" t-call="vesta_auth_otp.otp_card"/>
         </xpath>
-        <xpath expr="//form[hasclass('oe_signup_form')]//div[hasclass('oe_login_buttons')]" position="inside">
-            <button t-if="vesta_otp" type="button" class="btn btn-link btn-sm o_vo_switch" data-vo-switch="otp">
-                <i class="oi" data-icon="smartphone" aria-hidden="true"/> Sign up with mobile number
-            </button>
+        <xpath expr="//form[hasclass('oe_signup_form')]//div[hasclass('field-name')]" position="before">
+            <div t-if="vesta_otp" class="o_vo_form_head">
+                <h2 class="o_vo_title">Sign up with email</h2>
+            </div>
+        </xpath>
+    </template>
+
+    <!-- The mobile login next to the other ways to log in (passkey, Google…) under the email forms -->
+    <template id="login_oauth" inherit_id="web.login_oauth" name="Vesta Mobile Login: other ways to log in" priority="40">
+        <xpath expr="//t[@t-set='auth_btns']" position="after">
+            <t t-if="vesta_otp">
+                <t t-if="request.httprequest.path.startswith('/web/signup')" t-set="vo_auth_body">Sign up with mobile number</t>
+                <t t-else="" t-set="vo_auth_body">Log in with mobile number</t>
+                <t t-set="auth_btns" t-value="auth_btns + [{'css_class': 'oi oi-fw', 'icon': 'smartphone', 'body': vo_auth_body, 'list_item_class': 'o_vo_switch o_vo_to_otp'}]"/>
+            </t>
+        </xpath>
+        <xpath expr="//div[hasclass('o_login_auth')]/em" position="replace">
+            <div class="o_vo_or"><span>or</span></div>
+        </xpath>
+    </template>
+
+    <!-- Password reset: a title like the other cards -->
+    <template id="reset_password" inherit_id="auth_signup.reset_password" name="Vesta Mobile Login: password reset page" priority="40">
+        <xpath expr="//form[hasclass('oe_reset_password_form')]" position="before">
+            <div t-if="not message" class="o_vo_form_head">
+                <h2 class="o_vo_title">Reset your password</h2>
+                <p t-if="token" class="o_vo_lead">Choose a new password.</p>
+                <p t-else="" class="o_vo_lead">Enter your email; we send you a link to choose a new password.</p>
+            </div>
         </xpath>
     </template>
 

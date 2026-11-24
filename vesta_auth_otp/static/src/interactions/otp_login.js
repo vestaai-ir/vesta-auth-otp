@@ -101,7 +101,9 @@ export class VestaOtpLogin extends Interaction {
         if (!button || this.mode === "change") {
             return;
         }
-        const otp = button.dataset.voSwitch === "otp";
+        // the buttons of the card say where they go; the mobile login among Odoo's ways to log in is a link
+        ev.preventDefault();
+        const otp = button.dataset.voSwitch === "otp" || button.classList.contains("o_vo_to_otp");
         this.el.classList.toggle("o_vo_active", otp);
         if (otp) {
             this.el.querySelector(".o_vo_step:not(.d-none) input")?.focus();

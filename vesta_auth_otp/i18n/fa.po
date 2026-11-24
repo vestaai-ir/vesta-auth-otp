@@ -26,16 +26,20 @@ msgstr "<i class=\"oi\" data-icon=\"edit\" aria-hidden=\"true\"/> ویرایش �
 #. module: vesta_auth_otp
 #: model_terms:ir.ui.view,arch_db:vesta_auth_otp.otp_card
 msgid ""
-"<i class=\"oi\" data-icon=\"mail\" aria-hidden=\"true\"/> Log in with email "
-"and password"
+"<i class=\"oi\" data-icon=\"mail\" aria-hidden=\"true\"/> <span>Log in with "
+"email</span>"
 msgstr ""
-"<i class=\"oi\" data-icon=\"mail\" aria-hidden=\"true\"/> ورود با ایمیل و "
-"رمز عبور"
+"<i class=\"oi\" data-icon=\"mail\" aria-hidden=\"true\"/> <span>ورود با "
+"ایمیل</span>"
 
 #. module: vesta_auth_otp
 #: model_terms:ir.ui.view,arch_db:vesta_auth_otp.otp_card
-msgid "<i class=\"oi\" data-icon=\"mail\" aria-hidden=\"true\"/> Sign up with email"
-msgstr "<i class=\"oi\" data-icon=\"mail\" aria-hidden=\"true\"/> ثبت‌نام با ایمیل"
+msgid ""
+"<i class=\"oi\" data-icon=\"mail\" aria-hidden=\"true\"/> <span>Sign up with"
+" email</span>"
+msgstr ""
+"<i class=\"oi\" data-icon=\"mail\" aria-hidden=\"true\"/> <span>ثبت‌نام با "
+"ایمیل</span>"
 
 #. module: vesta_auth_otp
 #: model_terms:ir.ui.view,arch_db:vesta_auth_otp.otp_card
@@ -50,24 +54,6 @@ msgid ""
 msgstr ""
 "<i class=\"oi\" data-icon=\"science\" aria-hidden=\"true\"/>\n"
 "                    <span>حالت آزمایشی: چیزی ارسال نمی‌شود، کد همین‌جا نمایش داده می‌شود.</span>"
-
-#. module: vesta_auth_otp
-#: model_terms:ir.ui.view,arch_db:vesta_auth_otp.login
-msgid ""
-"<i class=\"oi\" data-icon=\"smartphone\" aria-hidden=\"true\"/> Log in with "
-"mobile number"
-msgstr ""
-"<i class=\"oi\" data-icon=\"smartphone\" aria-hidden=\"true\"/> ورود با "
-"شماره‌ی موبایل"
-
-#. module: vesta_auth_otp
-#: model_terms:ir.ui.view,arch_db:vesta_auth_otp.signup
-msgid ""
-"<i class=\"oi\" data-icon=\"smartphone\" aria-hidden=\"true\"/> Sign up with"
-" mobile number"
-msgstr ""
-"<i class=\"oi\" data-icon=\"smartphone\" aria-hidden=\"true\"/> ثبت‌نام با "
-"شماره‌ی موبایل"
 
 #. module: vesta_auth_otp
 #: model_terms:ir.ui.view,arch_db:vesta_auth_otp.res_config_settings_view_form
@@ -121,6 +107,12 @@ msgid ""
 msgstr ""
 "<span>کد به این شماره ارسال شد:</span>\n"
 "                        <b class=\"o_vo_phone_display\" dir=\"ltr\"/>"
+
+#. module: vesta_auth_otp
+#: model_terms:ir.ui.view,arch_db:vesta_auth_otp.login_oauth
+#: model_terms:ir.ui.view,arch_db:vesta_auth_otp.otp_card
+msgid "<span>or</span>"
+msgstr "<span>یا</span>"
 
 #. module: vesta_auth_otp
 #: model_terms:ir.ui.view,arch_db:vesta_auth_otp.res_config_settings_view_form
@@ -212,6 +204,11 @@ msgstr "تغییر شماره‌ی موبایل"
 #: model_terms:ir.ui.view,arch_db:vesta_auth_otp.otp_card
 msgid "Change your mobile number"
 msgstr "تغییر شماره‌ی موبایل"
+
+#. module: vesta_auth_otp
+#: model_terms:ir.ui.view,arch_db:vesta_auth_otp.reset_password
+msgid "Choose a new password."
+msgstr "رمز عبور تازه را انتخاب کنید."
 
 #. module: vesta_auth_otp
 #: model_terms:ir.ui.view,arch_db:vesta_auth_otp.res_config_settings_view_form
@@ -377,6 +374,17 @@ msgid "Enter the test mobile (an Iranian mobile number) first."
 msgstr "اول موبایل آزمایشی (یک شماره‌ی موبایل ایرانی) را وارد کنید."
 
 #. module: vesta_auth_otp
+#: model_terms:ir.ui.view,arch_db:vesta_auth_otp.login
+msgid "Enter your email and password."
+msgstr "ایمیل و رمز عبور خود را وارد کنید."
+
+#. module: vesta_auth_otp
+#: model_terms:ir.ui.view,arch_db:vesta_auth_otp.reset_password
+msgid "Enter your email; we send you a link to choose a new password."
+msgstr ""
+"ایمیل خود را وارد کنید؛ پیوندی برای انتخاب رمز تازه برایتان می‌فرستیم."
+
+#. module: vesta_auth_otp
 #. odoo-python
 #: code:addons/vesta_auth_otp/models/vesta_auth_otp.py:0
 msgid "Enter your full name."
@@ -479,6 +487,16 @@ msgid "Log in or sign up"
 msgstr "ورود یا ثبت‌نام"
 
 #. module: vesta_auth_otp
+#: model_terms:ir.ui.view,arch_db:vesta_auth_otp.login
+msgid "Log in with email"
+msgstr "ورود با ایمیل"
+
+#. module: vesta_auth_otp
+#: model_terms:ir.ui.view,arch_db:vesta_auth_otp.login_oauth
+msgid "Log in with mobile number"
+msgstr "ورود با شماره‌ی موبایل"
+
+#. module: vesta_auth_otp
 #: model_terms:ir.ui.view,arch_db:vesta_auth_otp.vesta_auth_otp_view_search
 msgid "Logged In"
 msgstr "وارد شد"
@@ -549,6 +567,11 @@ msgid "No account was found with this mobile number."
 msgstr "حسابی با این شماره‌ی موبایل پیدا نشد."
 
 #. module: vesta_auth_otp
+#: model_terms:ir.ui.view,arch_db:vesta_auth_otp.otp_card
+msgid "No account yet? Your mobile number creates one."
+msgstr "حساب ندارید؟ با همین شماره ثبت‌نام می‌شوید."
+
+#. module: vesta_auth_otp
 #: model_terms:ir.actions.act_window,help:vesta_auth_otp.action_vesta_auth_otp
 msgid "No login code was asked for yet"
 msgstr "هنوز کد ورودی درخواست نشده است"
@@ -617,6 +640,11 @@ msgstr "کاربرد"
 #: model:ir.model.fields,field_description:vesta_auth_otp.field_res_config_settings__vesta_otp_resend_delay
 msgid "Resend After (seconds)"
 msgstr "ارسال دوباره پس از (ثانیه)"
+
+#. module: vesta_auth_otp
+#: model_terms:ir.ui.view,arch_db:vesta_auth_otp.reset_password
+msgid "Reset your password"
+msgstr "بازیابی رمز عبور"
 
 #. module: vesta_auth_otp
 #. odoo-python
@@ -690,6 +718,16 @@ msgstr "ارسال شد"
 #: model:ir.model.fields,field_description:vesta_auth_otp.field_vesta_auth_otp__session_hash
 msgid "Session Hash"
 msgstr "درهم‌سازی نشست"
+
+#. module: vesta_auth_otp
+#: model_terms:ir.ui.view,arch_db:vesta_auth_otp.signup
+msgid "Sign up with email"
+msgstr "ثبت‌نام با ایمیل"
+
+#. module: vesta_auth_otp
+#: model_terms:ir.ui.view,arch_db:vesta_auth_otp.login_oauth
+msgid "Sign up with mobile number"
+msgstr "ثبت‌نام با شماره‌ی موبایل"
 
 #. module: vesta_auth_otp
 #: model_terms:ir.ui.view,arch_db:vesta_auth_otp.otp_card
